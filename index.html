@@ -18,6 +18,7 @@
         * {
             font-family: 'Alkatra', cursive;
             font-family: 'Ubuntu', sans-serif;
+            /*font-weight: bold;*/
         }
 
         body {
@@ -31,7 +32,10 @@
         header {
             width: 97vw;
             height: 60px;
-            border: 2px solid;
+            border: 2px solid #ff253a;
+            border-radius: 10px;
+
+            background-color: #31333B;
 
             margin: 10px;
 
@@ -42,6 +46,8 @@
         header>section>div:first-child {
             width: fit-content;
             height: fit-content;
+
+            color: white;
 
             padding: 10px;
 
@@ -54,7 +60,6 @@
         header>section>div:nth-child(2) {
             width: fit-content;
             height: fit-content;
-            /*border: 2px solid red;*/
 
             padding: 10px;
 
@@ -65,18 +70,58 @@
             margin: auto;
         }
 
-        #mSection01 {
-            display: flex;
+        header>section>div>button {
+            border: none;
+            background-color: #31333B;
+            color: white;
+            font-weight: bold;
+        }
 
+        /*<!-------------------------------------- End of the header ---------------------------------------------->*/
+
+        main {
+            position: relative;
+        }
+
+        #mSection01 {
+            width: 1150px;
             border: 1px solid red;
+
+            position: relative;
+            left: 50px;
+
+            margin-top: 40px;
+        }
+
+        #mSection01>div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #mSection01SubSection01>div {
+            border: 1px solid;
+            height: fit-content;
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
         }
 
         #mSection01SubSection01 {
-            border: 1px solid black;
+            position: relative;
         }
 
-        #mSection01SubSection02 {
-            border: 1px solid blue;
+        #mSection01SubSection01>div>pre>button {
+            border: 2px solid orangered;
+            border-radius: 10px;
+            /*background-color: #31333B;*/
+            color: orangered;
+            font-weight: bold;
+
+            position: absolute;
+            left: 60px;
+            margin: auto;
         }
 
         /*<!------------------------------------------ About Me --------------------------------------------------->*/
@@ -98,6 +143,248 @@
 
         .skillSet>img {
             width: 150px;
+        }
+
+        .skillSet1>img {
+            width: 130px;
+        }
+
+        #mSectionSkillsSub02 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        /*<!------------------------------------- Skills (tooltips) ---------------------------------------------->*/
+
+        #toolTipText1 {
+            width: fit-content;
+
+            font-weight: bold;
+            color: white;
+
+            background-color: #20c997;
+            padding: 7px;
+            border-radius: 10px;
+
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+
+            transform: translateY(50%);
+
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #figmaDiv1:hover #toolTipText1 {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /*2*/
+        #toolTipText2 {
+            width: fit-content;
+
+            font-weight: bold;
+            color: white;
+
+            background-color: #20c997;
+            padding: 7px;
+            border-radius: 10px;
+
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+
+            transform: translateY(60%);
+
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #figmaDiv2:hover #toolTipText2 {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /*3*/
+        #toolTipText3 {
+            width: fit-content;
+
+            font-weight: bold;
+            color: white;
+
+            background-color: #20c997;
+            padding: 7px;
+            border-radius: 10px;
+
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+
+            transform: translateY(70%);
+
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #figmaDiv3:hover #toolTipText3 {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /*4*/
+        #toolTipText4 {
+            width: fit-content;
+
+            font-weight: bold;
+            color: white;
+
+            background-color: #20c997;
+            padding: 7px;
+            border-radius: 10px;
+
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+
+            transform: translateY(60%);
+
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #figmaDiv4:hover #toolTipText4 {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /*5*/
+        #toolTipText5 {
+            width: fit-content;
+
+            font-weight: bold;
+            color: white;
+
+            background-color: #20c997;
+            padding: 7px;
+            border-radius: 10px;
+
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+
+            transform: translateY(50%);
+
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #figmaDiv5:hover #toolTipText5 {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /*6*/
+        #toolTipText6 {
+            width: fit-content;
+
+            font-weight: bold;
+            color: white;
+
+            background-color: #20c997;
+            padding: 7px;
+            border-radius: 10px;
+
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+
+            transform: translateY(100%);
+
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #figmaDiv6:hover #toolTipText6 {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /*7*/
+        #toolTipText7 {
+            width: fit-content;
+
+            font-weight: bold;
+            color: white;
+
+            background-color: #20c997;
+            padding: 7px;
+            border-radius: 10px;
+
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+
+            transform: translateY(100%);
+
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #figmaDiv7:hover #toolTipText7 {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /*8*/
+        #toolTipText8 {
+            width: fit-content;
+
+            font-weight: bold;
+            color: white;
+
+            background-color: #20c997;
+            padding: 7px;
+            border-radius: 10px;
+
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+
+            transform: translateY(100%);
+
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #figmaDiv8:hover #toolTipText8 {
+            visibility: visible;
+            opacity: 1;
         }
 
         /*<!------------------------------------------ Education --------------------------------------------------->*/
@@ -204,32 +491,36 @@
 
         <section id="mSection01">
 
-            <section id="mSection01SubSection01">
+            <div>
 
-                <div>
+                <section id="mSection01SubSection01">
 
-                    <pre>
+                    <div>
 
-                    <h1>I'M</h1>
-                    <h3>Umesh Madhuranga.</h3>
-                    <h5>Professional UI designer with Front end Development Skills.</h5>
+                        <pre>
 
-                </pre>
+        <h2>I'M</h2>
+        Umesh Madhuranga.
+        Professional UI designer with Front end Development Skills.
 
-                </div>
+                            <button type="button">Contact me</button>
 
-                <button type="button">Contact me</button>
+                        </pre>
 
-            </section>
+                    </div>
 
-            <section id="mSection01SubSection02">
+                </section>
 
-                <input type="image" src="assests/images/My%20photo.jpg" width="400px">
+                <section id="mSection01SubSection02">
 
-            </section>
+                    <input type="image" src="assests/images/My%20photo.jpg" width="400px">
+
+                </section>
+
+            </div>
 
         </section>
-        <br>
+        <br><br><br>
 
         <!------------------------------------------ About Me--------------------------------------------------->
 
@@ -250,7 +541,7 @@
             </pre>
 
         </section>
-        <br>
+        <br><br>
 
         <!------------------------------------------ Skills --------------------------------------------------->
 
@@ -260,40 +551,71 @@
             
             <section id="mSectionSkillsSub01">
 
-                <div class="skillSet">
+                <div class="skillSet" style="position: relative" id="figmaDiv1">
 
+                    <span id="toolTipText1">Figma</span>
                     <img src="assests/icons/icons8-figma-340.png">
 
                 </div>
 
-                <div class="skillSet">
+                <div class="skillSet" style="position: relative" id="figmaDiv2">
 
+                    <span id="toolTipText2">Java</span>
                     <img src="assests/icons/icons8-java-480.png">
 
                 </div>
 
-                <div class="skillSet">
+                <div class="skillSet" style="position: relative" id="figmaDiv3">
 
+                    <span id="toolTipText3">Photo Shop</span>
                     <img src="assests/icons/icons8-adobe-photoshop-480.png">
 
                 </div>
 
-                <div class="skillSet">
+                <div class="skillSet" style="position: relative" id="figmaDiv4">
 
+                    <span id="toolTipText4">MySql</span>
                     <img src="assests/icons/icons8-mysql-logo-480%20(3).png">
 
                 </div>
 
-                <div class="skillSet">
+                <div class="skillSet" style="position: relative" id="figmaDiv5">
 
+                    <span id="toolTipText5">Google</span>
                     <img src="assests/icons/icons8-google-240.png">
 
                 </div>
                 
             </section>
+            <br><br>
+
+            <section id="mSectionSkillsSub02">
+
+                <div class="skillSet1" style="position: relative" id="figmaDiv6">
+
+                    <span id="toolTipText6">HTML</span>
+                    <img src="assests/icons/html-5%20icon.png">
+
+                </div>
+
+                <div class="skillSet1" style="position: relative" id="figmaDiv7">
+
+                    <span id="toolTipText7">CSS</span>
+                    <img src="assests/icons/css3%20icon.png">
+
+                </div>
+
+                <div class="skillSet1"  style="position: relative" id="figmaDiv8">
+
+                    <span id="toolTipText8">Java Script</span>
+                    <img src="assests/icons/javascript%20icon.png">
+
+                </div>
+
+            </section>
 
         </section>
-        <br>
+        <br><br>
 
         <!------------------------------------------ Education --------------------------------------------------->
 
