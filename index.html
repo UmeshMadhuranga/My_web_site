@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Umesh Madhuranga</title>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="assests/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assests/boostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assests/boostrap/css/bootstrap-grid.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {
+            /*background-color: #31333B;*/
+        }
+
+        /*main>section {*/
+        /*    display: none;*/
+        /*}*/
+
+        header {
+            width: 100vw;
+            height: 60px;
+            border: 2px solid;
+
+            position: relative;
+
+        }
+
+        header>section>div:first-child {
+            width: fit-content;
+            height: fit-content;
+
+            padding: 10px;
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        header>section>div:nth-child(2) {
+            width: fit-content;
+            height: fit-content;
+            /*border: 2px solid red;*/
+
+            padding: 10px;
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        #mSection01 {
+            display: flex;
+
+            border: 1px solid red;
+        }
+
+        #mSection01SubSection01 {
+            border: 1px solid black;
+        }
+
+        #mSection01SubSection02 {
+            border: 1px solid blue;
+        }
+
+        /*<!------------------------------------------ About Me --------------------------------------------------->*/
+
+        #mSectionAboutMe>h3 {
+            text-align: center;
+        }
+
+        /*<!------------------------------------------ Skills --------------------------------------------------->*/
+
+        #mSectionSkills>h4 {
+            text-align: center;
+        }
+
+        #mSectionSkillsSub01 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .skillSet>img {
+            width: 200px;
+        }
+
+        /*<!------------------------------------------ Education --------------------------------------------------->*/
+
+        #mSectionEducation>h4 {
+            text-align: center;
+        }
+
+        /*<!------------------------------------------ Projects --------------------------------------------------->*/
+
+        #mSectionProjects>h3 {
+            text-align: center;
+        }
+
+    </style>
+
+<!--    //////////////////////////////////            End of the Styles       ///////////////////////////////////////-->
+<!--    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+
+</head>
+<body>
+
+    <!------------------------------------------ Header --------------------------------------------------->
+
+    <header>
+
+        <section>
+
+            <div>
+
+                <h3>Hello</h3>
+
+            </div>
+
+            <div>
+
+                <button class="hButton">About</button>
+                <button class="hButton">Projects</button>
+                <button class="hButton">Gallery</button>
+                <button class="hButton">Contact</button>
+
+            </div>
+
+        </section>
+
+    </header>
+
+    <!------------------------------------------ About --------------------------------------------------->
+
+    <main>
+
+        <section id="mSection01">
+
+            <section id="mSection01SubSection01">
+
+                <div>
+
+                    <pre>
+
+                    <h1>I'M</h1>
+                    <h3>Umesh Madhuranga.</h3>
+                    <h5>Professional UI designer with Front end Development Skills.</h5>
+
+                </pre>
+
+                </div>
+
+                <button type="button">Contact me</button>
+
+            </section>
+
+            <section id="mSection01SubSection02">
+
+                <input type="image" src="assests/images/My%20photo.jpg" width="400px">
+
+            </section>
+
+        </section>
+        <br>
+
+        <!------------------------------------------ About Me--------------------------------------------------->
+
+
+        <section id="mSectionAboutMe">
+
+            <h3>About me</h3>
+
+            <pre>
+
+                I’m a Front End Developer located in Sri Lanka. I have a serious passions for UI effects, animations
+                and creating intuitive, dynamic user experiences.
+
+                Well - organised person , problem solver , independent employee with high attention to deal.
+
+                Let’s make something special.
+
+            </pre>
+
+        </section>
+        <br>
+
+        <!------------------------------------------ Skills --------------------------------------------------->
+
+        <section id="mSectionSkills">
+
+            <h4>Skills</h4>
+            
+            <section id="mSectionSkillsSub01">
+
+                <div class="skillSet">
+
+                    <img src="assests/icons/icons8-figma-340.png">
+
+                </div>
+
+                <div class="skillSet">
+
+                    <img src="assests/icons/icons8-java-480.png">
+
+                </div>
+
+                <div class="skillSet">
+
+                    <img src="assests/icons/icons8-adobe-photoshop-480.png">
+
+                </div>
+
+                <div class="skillSet">
+
+                    <img src="assests/icons/icons8-mysql-logo-480%20(3).png">
+
+                </div>
+
+                <div class="skillSet">
+
+                    <img src="assests/icons/icons8-google-240.png">
+
+                </div>
+                
+            </section>
+
+        </section>
+        <br>
+
+        <!------------------------------------------ Education --------------------------------------------------->
+
+        <section id="mSectionEducation">
+
+            <h4>Education</h4>
+
+            <pre>
+
+                Basic Education    : Kuli/ Saranath National Collage
+
+                Courses            : AA1
+                                     AA2 in The Association of Accounting Technicians of Sri Lanka (AAT)
+
+                Further Education  : HND in software engineering - IJSE
+
+            </pre>
+
+        </section>
+        <br>
+
+        <!------------------------------------------ Projects --------------------------------------------------->
+
+        <section id="mSectionProjects">
+
+            <h3>Projects</h3>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
