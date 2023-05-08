@@ -15,6 +15,11 @@
 
     <style>
 
+        * {
+            font-family: 'Alkatra', cursive;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
         body {
             /*background-color: #31333B;*/
         }
@@ -24,9 +29,11 @@
         /*}*/
 
         header {
-            width: 100vw;
+            width: 97vw;
             height: 60px;
             border: 2px solid;
+
+            margin: 10px;
 
             position: relative;
 
@@ -90,7 +97,7 @@
         }
 
         .skillSet>img {
-            width: 200px;
+            width: 150px;
         }
 
         /*<!------------------------------------------ Education --------------------------------------------------->*/
@@ -101,8 +108,61 @@
 
         /*<!------------------------------------------ Projects --------------------------------------------------->*/
 
+        #mSectionProjects {
+            position: relative;
+        }
+
         #mSectionProjects>h3 {
             text-align: center;
+        }
+
+        #mSectionProjectsSub01 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #mSectionProjects>button {
+            width: fit-content;
+
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        /*<!------------------------------------------ Assignments --------------------------------------------------->*/
+
+        #mSectionAssignments {
+            position: relative;
+        }
+
+        #mSectionAssignments>h4 {
+            text-align: center;
+        }
+
+        #mSectionAssignmentsSub01 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #mSectionAssignments>button {
+            width: fit-content;
+
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        /*<!------------------------------------------ Contact --------------------------------------------------->*/
+
+        #mSectionContactSub1 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #mSectionContactSub1>div {
+            border: 2px solid #0d6efd;
         }
 
     </style>
@@ -260,8 +320,98 @@
         <section id="mSectionProjects">
 
             <h3>Projects</h3>
+            <br>
+
+            <section id="mSectionProjectsSub01">
+
+                <div>
+                    <img src="assests/images/SubhashPharmacy%2001.png" width="400px">
+                </div>
+
+                <div>
+                    <img src="assests/images/SubhashPharmacy%2001.png" width="400px">
+                </div>
+
+                <div>
+                    <img src="assests/images/SubhashPharmacy%2001.png" width="400px">
+                </div>
+
+            </section>
+            <br>
+
+            <button type="button">View More</button>
 
         </section>
+        <br><br><br><br>
+
+        <!------------------------------------------ Assignments --------------------------------------------------->
+
+        <section id="mSectionAssignments">
+
+            <h4>Assignments</h4>
+            <br>
+
+            <section id="mSectionAssignmentsSub01">
+
+                <div>
+                    <img src="assests/images/SubhashPharmacy%2001.png" width="400px">
+                </div>
+
+                <div>
+                    <img src="assests/images/SubhashPharmacy%2001.png" width="400px">
+                </div>
+
+                <div>
+                    <img src="assests/images/SubhashPharmacy%2001.png" width="400px">
+                </div>
+
+            </section>
+            <br>
+
+            <button type="button">View More</button>
+
+        </section>
+        <br><br><br><br>
+
+        <!------------------------------------------ Contact --------------------------------------------------->
+
+        <section id="mSectionContact">
+
+            <h3 style="text-align: center">Contact</h3>
+            <br>
+
+            <section id="mSectionContactSub1">
+
+                <div>
+                    <i class="fa-solid fa-at"></i>
+                    <a href="mailto:umeshmadhu2000@gamil.com" style="text-decoration: none; color: black">
+                        umeshmadhu2000@gamil.com
+                    </a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:0766828476" style="text-decoration: none; color: black">+94 76 682 8476</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a href="#" style="text-decoration: none; color: black">Kuliyapitiya, Sri Lanka</a><br>
+                </div>
+
+            </section>
+
+        </section>
+        <br><br>
+
+        <!------------------------------------------ End --------------------------------------------------->
+
+        <section id="mSectionThankYou">
+
+            <p style="text-align: center">Thank you</p>
+
+        </section>
+        <br><br>
 
     </main>
 
