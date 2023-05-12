@@ -13,456 +13,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 
-    <style>
-
-        * {
-            font-family: 'Alkatra', cursive;
-            font-family: 'Ubuntu', sans-serif;
-            /*font-weight: bold;*/
-        }
-
-        body {
-            /*background-color: #31333B;*/
-        }
-
-        /*main>section {*/
-        /*    display: none;*/
-        /*}*/
-
-        header {
-            width: 97vw;
-            height: 60px;
-            border: 2px solid #ff253a;
-            border-radius: 10px;
-
-            background-color: #31333B;
-
-            margin: 10px;
-
-            position: relative;
-
-        }
-
-        header>section>div:first-child {
-            width: fit-content;
-            height: fit-content;
-
-            color: white;
-
-            padding: 10px;
-
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-        }
-
-        header>section>div:nth-child(2) {
-            width: fit-content;
-            height: fit-content;
-
-            padding: 10px;
-
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            margin: auto;
-        }
-
-        header>section>div>button {
-            border: none;
-            background-color: #31333B;
-            color: white;
-            font-weight: bold;
-        }
-
-        /*<!-------------------------------------- End of the header ---------------------------------------------->*/
-
-        main {
-            position: relative;
-        }
-
-        #mSection01 {
-            width: 1150px;
-            border: 1px solid red;
-
-            position: relative;
-            left: 50px;
-
-            margin-top: 40px;
-        }
-
-        #mSection01>div {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        #mSection01SubSection01>div {
-            border: 1px solid;
-            height: fit-content;
-
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-        }
-
-        #mSection01SubSection01 {
-            position: relative;
-        }
-
-        #mSection01SubSection01>div>pre>button {
-            border: 2px solid orangered;
-            border-radius: 10px;
-            /*background-color: #31333B;*/
-            color: orangered;
-            font-weight: bold;
-
-            position: absolute;
-            left: 60px;
-            margin: auto;
-        }
-
-        /*<!------------------------------------------ About Me --------------------------------------------------->*/
-
-        #mSectionAboutMe>h3 {
-            text-align: center;
-        }
-
-        /*<!------------------------------------------ Skills --------------------------------------------------->*/
-
-        #mSectionSkills>h4 {
-            text-align: center;
-        }
-
-        #mSectionSkillsSub01 {
-            display: flex;
-            justify-content: space-evenly;
-        }
-
-        .skillSet>img {
-            width: 150px;
-        }
-
-        .skillSet1>img {
-            width: 130px;
-        }
-
-        #mSectionSkillsSub02 {
-            display: flex;
-            justify-content: space-evenly;
-        }
-
-        /*<!------------------------------------- Skills (tooltips) ---------------------------------------------->*/
-
-        #toolTipText1 {
-            width: fit-content;
-
-            font-weight: bold;
-            color: white;
-
-            background-color: #20c997;
-            padding: 7px;
-            border-radius: 10px;
-
-            position: absolute;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            margin: auto;
-
-            transform: translateY(50%);
-
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        #figmaDiv1:hover #toolTipText1 {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        /*2*/
-        #toolTipText2 {
-            width: fit-content;
-
-            font-weight: bold;
-            color: white;
-
-            background-color: #20c997;
-            padding: 7px;
-            border-radius: 10px;
-
-            position: absolute;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            margin: auto;
-
-            transform: translateY(60%);
-
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        #figmaDiv2:hover #toolTipText2 {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        /*3*/
-        #toolTipText3 {
-            width: fit-content;
-
-            font-weight: bold;
-            color: white;
-
-            background-color: #20c997;
-            padding: 7px;
-            border-radius: 10px;
-
-            position: absolute;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            margin: auto;
-
-            transform: translateY(70%);
-
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        #figmaDiv3:hover #toolTipText3 {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        /*4*/
-        #toolTipText4 {
-            width: fit-content;
-
-            font-weight: bold;
-            color: white;
-
-            background-color: #20c997;
-            padding: 7px;
-            border-radius: 10px;
-
-            position: absolute;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            margin: auto;
-
-            transform: translateY(60%);
-
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        #figmaDiv4:hover #toolTipText4 {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        /*5*/
-        #toolTipText5 {
-            width: fit-content;
-
-            font-weight: bold;
-            color: white;
-
-            background-color: #20c997;
-            padding: 7px;
-            border-radius: 10px;
-
-            position: absolute;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            margin: auto;
-
-            transform: translateY(50%);
-
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        #figmaDiv5:hover #toolTipText5 {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        /*6*/
-        #toolTipText6 {
-            width: fit-content;
-
-            font-weight: bold;
-            color: white;
-
-            background-color: #20c997;
-            padding: 7px;
-            border-radius: 10px;
-
-            position: absolute;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            margin: auto;
-
-            transform: translateY(100%);
-
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        #figmaDiv6:hover #toolTipText6 {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        /*7*/
-        #toolTipText7 {
-            width: fit-content;
-
-            font-weight: bold;
-            color: white;
-
-            background-color: #20c997;
-            padding: 7px;
-            border-radius: 10px;
-
-            position: absolute;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            margin: auto;
-
-            transform: translateY(100%);
-
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        #figmaDiv7:hover #toolTipText7 {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        /*8*/
-        #toolTipText8 {
-            width: fit-content;
-
-            font-weight: bold;
-            color: white;
-
-            background-color: #20c997;
-            padding: 7px;
-            border-radius: 10px;
-
-            position: absolute;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            margin: auto;
-
-            transform: translateY(100%);
-
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        #figmaDiv8:hover #toolTipText8 {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        /*<!------------------------------------------ Education --------------------------------------------------->*/
-
-        #mSectionEducation>h4 {
-            text-align: center;
-        }
-
-        /*<!------------------------------------------ Projects --------------------------------------------------->*/
-
-        #mSectionProjects {
-            position: relative;
-        }
-
-        #mSectionProjects>h3 {
-            text-align: center;
-        }
-
-        #mSectionProjectsSub01 {
-            display: flex;
-            justify-content: space-evenly;
-        }
-
-        #mSectionProjects>button {
-            width: fit-content;
-
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin: auto;
-        }
-
-        /*<!------------------------------------------ Assignments --------------------------------------------------->*/
-
-        #mSectionAssignments {
-            position: relative;
-        }
-
-        #mSectionAssignments>h4 {
-            text-align: center;
-        }
-
-        #mSectionAssignmentsSub01 {
-            display: flex;
-            justify-content: space-evenly;
-        }
-
-        #mSectionAssignments>button {
-            width: fit-content;
-
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin: auto;
-        }
-
-        /*<!------------------------------------------ Contact --------------------------------------------------->*/
-
-        #mSectionContactSub1 {
-            display: flex;
-            justify-content: space-evenly;
-        }
-
-        #mSectionContactSub1>div {
-            border: 2px solid #0d6efd;
-        }
-
-    </style>
-
-<!--    //////////////////////////////////            End of the Styles       ///////////////////////////////////////-->
-<!--    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <link rel="stylesheet" href="styles/styles.css">
 
 </head>
 <body>
 
     <!------------------------------------------ Header --------------------------------------------------->
 
-    <header>
+    <header id="navBar">
 
         <section>
 
@@ -474,10 +32,10 @@
 
             <div>
 
-                <button class="hButton">About</button>
-                <button class="hButton">Projects</button>
-                <button class="hButton">Gallery</button>
-                <button class="hButton">Contact</button>
+                <button class="hButton" id="btnAbout">About</button>
+                <button class="hButton" id="btnProjects">Projects</button>
+                <button class="hButton" id="btnGallery">Gallery</button>
+                <button class="hButton" id="btnContact">Contact</button>
 
             </div>
 
@@ -487,7 +45,7 @@
 
     <!------------------------------------------ About --------------------------------------------------->
 
-    <main>
+    <main id="main_01">
 
         <section id="mSection01">
 
@@ -499,9 +57,12 @@
 
                         <pre>
 
-        <h2>I'M</h2>
-        Umesh Madhuranga.
-        Professional UI designer with Front end Development Skills.
+        <span style="font-size: 60px; font-weight: bolder; color: white">I'M</span>
+            <span style="font-size: 40px; color: orangered; font-weight: bold">Umesh Madhuranga.</span>
+
+        <span style="font-size: 20px; font-weight: bold; color: white">Professional UI designer
+              with
+              Front end Development Skills.</span>
 
                             <button type="button">Contact me</button>
 
@@ -513,7 +74,7 @@
 
                 <section id="mSection01SubSection02">
 
-                    <input type="image" src="assests/images/My%20photo.jpg" width="400px">
+                    <input type="image" src="assests/images/01.png" width="500px">
 
                 </section>
 
@@ -527,7 +88,12 @@
 
         <section id="mSectionAboutMe">
 
-            <h3>About me</h3>
+            <div class="titleTextDiv">
+
+                <h1 data-text="About_me" class="titleText">About_me</h1>
+
+            </div>
+            <br>
 
             <pre>
 
@@ -541,14 +107,18 @@
             </pre>
 
         </section>
-        <br><br>
+        <br>
 
         <!------------------------------------------ Skills --------------------------------------------------->
 
         <section id="mSectionSkills">
+            <div class="titleTextDiv">
 
-            <h4>Skills</h4>
-            
+                <h1 data-text="Skills" class="titleText">Skills</h1>
+
+            </div>
+            <br><br>
+
             <section id="mSectionSkillsSub01">
 
                 <div class="skillSet" style="position: relative" id="figmaDiv1">
@@ -565,13 +135,6 @@
 
                 </div>
 
-                <div class="skillSet" style="position: relative" id="figmaDiv3">
-
-                    <span id="toolTipText3">Photo Shop</span>
-                    <img src="assests/icons/icons8-adobe-photoshop-480.png">
-
-                </div>
-
                 <div class="skillSet" style="position: relative" id="figmaDiv4">
 
                     <span id="toolTipText4">MySql</span>
@@ -581,11 +144,11 @@
 
                 <div class="skillSet" style="position: relative" id="figmaDiv5">
 
-                    <span id="toolTipText5">Google</span>
+                    <span id="toolTipText5">Googling</span>
                     <img src="assests/icons/icons8-google-240.png">
 
                 </div>
-                
+
             </section>
             <br><br>
 
@@ -612,27 +175,101 @@
 
                 </div>
 
+                <div class="skillSet" style="position: relative" id="figmaDiv3">
+
+                    <span id="toolTipText3">Photo Shop</span>
+                    <img src="assests/icons/icons8-adobe-photoshop-480.png">
+
+                </div>
+
             </section>
 
         </section>
-        <br><br>
+        <br><br><br>
 
         <!------------------------------------------ Education --------------------------------------------------->
 
         <section id="mSectionEducation">
 
-            <h4>Education</h4>
+            <div class="titleTextDiv">
 
-            <pre>
+                <h1 data-text="Education" class="titleText">Education</h1>
 
-                Basic Education    : Kuli/ Saranath National Collage
+            </div>
+            <br>
 
-                Courses            : AA1
-                                     AA2 in The Association of Accounting Technicians of Sri Lanka (AAT)
+            <section id="mSectionEducationSub1">
 
-                Further Education  : HND in software engineering - IJSE
+                <div class="container">
 
-            </pre>
+                    <div class="row">
+
+                        <section class="col">
+
+                            <header2 class="title">
+
+                                <h2>Education</h2>
+
+                            </header2>
+
+                            <div class="contents">
+
+                                <div class="box">
+
+                                    <h4>2011 - 2019</h4>
+                                    <h3>Kuli/ Saranath national collage</h3>
+                                    <p>O/L and A/L</p>
+
+                                </div>
+
+                                <div class="box">
+
+                                    <h4>2018 - 2020</h4>
+                                    <h3>LTC Institute</h3>
+                                    <p>AA1 , AA2 , AA3</p>
+
+                                </div>
+
+                                <div class="box">
+
+                                    <h4>2022 - </h4>
+                                    <h3>IJSE Institute</h3>
+                                    <p>GDSE Deploma</p>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                        <section class="col">
+
+                            <header2 class="title">
+
+                                <h2>Experience</h2>
+
+                            </header2>
+
+                            <div class="contents">
+
+                                <div class="box">
+
+<!--                                    <h4>-</h4>-->
+<!--                                    <h3>-</h3>-->
+                                    <p style="font-size: 25px">Pending...</p>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                    </div>
+
+                </div>
+
+            </section>
+
 
         </section>
         <br>
@@ -641,27 +278,51 @@
 
         <section id="mSectionProjects">
 
-            <h3>Projects</h3>
-            <br>
+            <div class="titleTextDiv">
+
+                <h1 data-text="Projects" class="titleText">Projects</h1>
+
+            </div>
 
             <section id="mSectionProjectsSub01">
 
                 <div>
-                    <img src="assests/images/SubhashPharmacy%2001.png" width="400px">
+
+                    <div>
+
+                        <img src="assests/images/Projects1.jpg" width="400px">
+                        <span id="span1">POS System</span>
+
+                    </div>
+
+                    <div>
+
+                        <img src="assests/images/Projects2.jpg" width="400px">
+                        <span id="span2">Web Projects</span>
+
+                    </div>
+
+                    <div>
+
+                        <img src="assests/images/Projects3.jpg" width="400px">
+                        <span id="span4">Course Works</span>
+
+                    </div>
+
+                    <div>
+
+                        <img src="assests/images/Projects4.jpg" width="400px">
+                        <span id="span3">Other Projects</span>
+
+                    </div>
+
                 </div>
 
-                <div>
-                    <img src="assests/images/SubhashPharmacy%2001.png" width="400px">
-                </div>
-
-                <div>
-                    <img src="assests/images/SubhashPharmacy%2001.png" width="400px">
-                </div>
 
             </section>
             <br>
 
-            <button type="button">View More</button>
+            <button type="button" class="btnStyle">View More</button>
 
         </section>
         <br><br><br><br>
@@ -670,27 +331,47 @@
 
         <section id="mSectionAssignments">
 
-            <h4>Assignments</h4>
+            <div class="titleTextDiv">
+
+                <h1 data-text="Assignments" class="titleText">Assignments</h1>
+
+            </div>
             <br>
 
             <section id="mSectionAssignmentsSub01">
 
                 <div>
-                    <img src="assests/images/SubhashPharmacy%2001.png" width="400px">
+                    <img src="assests/images/assignments/As4.png">
                 </div>
 
                 <div>
-                    <img src="assests/images/SubhashPharmacy%2001.png" width="400px">
+                    <img src="assests/images/assignments/As5.png">
                 </div>
 
                 <div>
-                    <img src="assests/images/SubhashPharmacy%2001.png" width="400px">
+                    <img src="assests/images/assignments/As1.png">
+                </div>
+
+            </section>
+            <br><br>
+            <section id="mSectionAssignmentsSub02">
+
+                <div>
+                    <img src="assests/images/assignments/As3.png">
+                </div>
+
+                <div>
+                    <img src="assests/images/assignments/As10.png">
+                </div>
+
+                <div>
+                    <img src="assests/images/assignments/As2.png">
                 </div>
 
             </section>
             <br>
 
-            <button type="button">View More</button>
+            <button type="button" class="btnStyle">View More</button>
 
         </section>
         <br><br><br><br>
@@ -699,32 +380,36 @@
 
         <section id="mSectionContact">
 
-            <h3 style="text-align: center">Contact</h3>
-            <br>
+            <div class="titleTextDiv">
+
+                <h1 data-text="Contact" class="titleText">Contact</h1>
+
+            </div>
+            <br><br>
 
             <section id="mSectionContactSub1">
 
                 <div>
                     <i class="fa-solid fa-at"></i>
-                    <a href="mailto:umeshmadhu2000@gamil.com" style="text-decoration: none; color: black">
+                    <a href="mailto:umeshmadhu2000@gamil.com" style="text-decoration: none;">
                         umeshmadhu2000@gamil.com
                     </a>
                 </div>
 
                 <div>
                     <i class="fa-solid fa-phone"></i>
-                    <a href="tel:0766828476" style="text-decoration: none; color: black">+94 76 682 8476</a>
+                    <a href="tel:0766828476" style="text-decoration: none;">+94 76 682 8476</a>
                 </div>
 
                 <div>
                     <i class="fa-solid fa-location-dot"></i>
-                    <a href="#" style="text-decoration: none; color: black">Kuliyapitiya, Sri Lanka</a><br>
+                    <a href="https://goo.gl/maps/sHdZTTukA62J7sLL7" style="text-decoration: none;">Kuliyapitiya, Sri Lanka</a><br>
                 </div>
 
             </section>
 
         </section>
-        <br><br>
+        <br><br><br>
 
         <!------------------------------------------ End --------------------------------------------------->
 
@@ -736,6 +421,177 @@
         <br><br>
 
     </main>
+
+<!--    //////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--                                                    main 02                                                      -->
+<!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+
+    <main id="main_02">
+
+        <div>
+
+        <section id="m2SectionContact">
+
+            <h3>Contact Me</h3>
+
+            <section id="m2SectionContactSub1">
+
+                <div>
+
+                    <form>
+
+                        <div>
+                            <label for="fname">First name*</label><br>
+                            <input type="text" id="fname" placeholder="Type your first name" width="500px">
+                        </div>
+                        <br>
+
+                        <div>
+                            <label for="lname">Last name*</label><br>
+                            <input type="text" id="lname" placeholder="Type your last name">
+                        </div>
+                        <br>
+
+                        <div>
+                            <label for="email">E-mail address</label><br>
+                            <input type="email" id="email" placeholder="Type your email address">
+                        </div>
+                        <br>
+
+                        <div>
+                            <label for="message">Message*</label><br>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message"></textarea>
+                        </div>
+                        <br>
+
+                        <button type="button" class="btnStyle">Send Massage</button>
+
+                    </form>
+
+                </div>
+
+                <div>
+
+                    <img src="assests/images/Contact%20image.jpg" width="300px">
+
+                </div>
+
+            </section>
+
+        </section>
+
+        </div>
+
+    </main>
+
+
+<!--    //////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--                                                    main 03                                                      -->
+<!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+
+    <main id="main_03">
+
+        <section id="m3SectionProjects">
+
+            <h3>Projects</h3>
+
+            <section id="m3SectionProjectsSub1">
+
+                <div class="projectClass">
+
+                    <div>
+
+                        <img src="assests/images/SubhashPharmacy%2002.png">
+
+                    </div>
+
+                    <div>
+
+                        <h4>POS System</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci architecto est ipsam minima
+                            molestiae officia quas quidem repellendus suscipit?
+                        </p>
+                        <button>Load Project</button>
+
+                    </div>
+
+
+                </div>
+
+                <div class="projectClass">
+
+                    <div>
+
+                        <img src="assests/images/SubhashPharmacy%2002.png">
+
+                    </div>
+
+                    <div>
+
+                        <h4>POS System</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci architecto est ipsam minima
+                            molestiae officia quas quidem repellendus suscipit?</p>
+                        <button>Load Project</button>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+    <script src="assests/lib/jQuery/jquery-3.6.4.min.js"></script>
+
+    <script type="text/javascript">
+        var lastScrollTop = 0;
+        navBar = document.getElementById("navBar");
+        window.addEventListener("scroll", () => {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navBar.style.top = "-80px";
+            } else {
+                navBar.style.top = "0";
+            }lastScrollTop = scrollTop;
+        })
+    </script>
+
+    <script>
+
+        document.getElementById("btnAbout").addEventListener('click', function () {
+            $('#main_01').css("display", "unset");
+            $('#main_02').css("display", "none");
+            $('#main_03').css("display", "none");
+
+            $('#navBar').css("background-color", "#31333B");
+        })
+
+        document.getElementById("btnProjects").addEventListener('click', function () {
+            $('#main_01').css("display", "none");
+            $('#main_02').css("display", "none");
+            $('#main_03').css("display", "unset");
+
+            $('#navBar').css("background-color", "#ECEEED");
+
+        })
+
+        document.getElementById("btnGallery").addEventListener('click', function () {
+            // $('main').css("display", "unset");
+            // $('#m2SectionContact').css("display", "none");
+        })
+
+        document.getElementById("btnContact").addEventListener('click', function () {
+            $('#main_01').css("display", "none");
+            $('#main_02').css("display", "unset");
+            $('#main_03').css("display", "none");
+
+            $('#navBar').css("background-color", "#ECEEED");
+        })
+
+    </script>
 
 </body>
 </html>

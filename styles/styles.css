@@ -1,0 +1,839 @@
+* {
+    font-family: 'Alkatra', cursive;
+    font-family: 'Ubuntu', sans-serif;
+    /*font-weight: bold;*/
+}
+
+body {
+    background-color: #31333B;
+}
+
+header {
+    background-color: #31333B;
+
+    position: fixed;
+    top: 0px;
+
+    box-sizing: border-box;
+
+    transition: 0.5s;
+    z-index: 9999;
+}
+
+header>section {
+    width: 97vw;
+    height: 60px;
+    border: 2px solid #ff253a;
+    border-radius: 10px;
+
+    background-color: #31333B;
+
+    margin: 10px;
+}
+
+header>section>div:first-child {
+    width: fit-content;
+    height: fit-content;
+
+    color: white;
+
+    padding: 10px;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+header>section>div:nth-child(2) {
+    width: fit-content;
+    height: fit-content;
+
+    padding: 10px;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto;
+}
+
+header>section>div>button {
+    border: none;
+    background-color: #31333B;
+    color: white;
+    font-weight: bold;
+}
+
+header>section>div>button:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+    color: navajowhite;
+    transform: translateY(-7%);
+}
+
+/*<!-------------------------------------- End of the header ---------------------------------------------->*/
+
+
+/*<!-------------------------------------- Mains ---------------------------------------------->*/
+
+#main_03 {
+    display: none;
+}
+
+#main_02 {
+    display: none;
+}
+
+
+/*<!-------------------------------------- Mains ---------------------------------------------->*/
+
+
+main>section {
+    position: relative;
+    top: 70px;
+}
+
+#mSection01 {
+    width: 1150px;
+    /*border: 1px solid red;*/
+
+    position: relative;
+    left: 50px;
+    /*top: 70px;*/
+
+    margin-top: 40px;
+    box-sizing: border-box;
+}
+
+#mSection01>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#mSection01SubSection01>div {
+    /*border: 1px solid;*/
+    height: fit-content;
+
+    background-color: #31333B;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#mSection01SubSection01 {
+    position: relative;
+}
+
+#mSection01SubSection01>div>pre>button {
+    border: 2px solid orangered;
+    border-radius: 10px;
+    background-color: #31333B;
+    color: orangered;
+    font-weight: bold;
+
+    position: absolute;
+    left: 60px;
+    margin: auto;
+}
+
+/*<!------------------------------------------ About Me --------------------------------------------------->*/
+
+#mSectionAboutMe {
+    position: relative;
+}
+
+#mSectionAboutMe>pre {
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+    line-height: 30px;
+}
+
+/*#mSectionAboutMe>h3 {*/
+/*    text-align: center;*/
+/*}*/
+
+/*<!------------------------------------------ Skills --------------------------------------------------->*/
+
+#mSectionSkills>h4 {
+    text-align: center;
+}
+
+#mSectionSkillsSub01 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.skillSet>img {
+    width: 150px;
+}
+
+.skillSet1>img {
+    width: 130px;
+}
+
+#mSectionSkillsSub02 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*<!------------------------------------- Skills (tooltips) ---------------------------------------------->*/
+
+#toolTipText1 {
+    width: fit-content;
+
+    font-weight: bold;
+    color: white;
+
+    background-color: #20c997;
+    padding: 7px;
+    border-radius: 10px;
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+
+    transform: translateY(50%);
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#figmaDiv1:hover #toolTipText1 {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*2*/
+#toolTipText2 {
+    width: fit-content;
+
+    font-weight: bold;
+    color: white;
+
+    background-color: #20c997;
+    padding: 7px;
+    border-radius: 10px;
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+
+    transform: translateY(60%);
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#figmaDiv2:hover #toolTipText2 {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*3*/
+#toolTipText3 {
+    width: fit-content;
+
+    font-weight: bold;
+    color: white;
+
+    background-color: #20c997;
+    padding: 7px;
+    border-radius: 10px;
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+
+    transform: translateY(70%);
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#figmaDiv3:hover #toolTipText3 {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*4*/
+#toolTipText4 {
+    width: fit-content;
+
+    font-weight: bold;
+    color: white;
+
+    background-color: #20c997;
+    padding: 7px;
+    border-radius: 10px;
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+
+    transform: translateY(60%);
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#figmaDiv4:hover #toolTipText4 {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*5*/
+#toolTipText5 {
+    width: fit-content;
+
+    font-weight: bold;
+    color: white;
+
+    background-color: #20c997;
+    padding: 7px;
+    border-radius: 10px;
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+
+    transform: translateY(50%);
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#figmaDiv5:hover #toolTipText5 {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*6*/
+#toolTipText6 {
+    width: fit-content;
+
+    font-weight: bold;
+    color: white;
+
+    background-color: #20c997;
+    padding: 7px;
+    border-radius: 10px;
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+
+    transform: translateY(100%);
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#figmaDiv6:hover #toolTipText6 {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*7*/
+#toolTipText7 {
+    width: fit-content;
+
+    font-weight: bold;
+    color: white;
+
+    background-color: #20c997;
+    padding: 7px;
+    border-radius: 10px;
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+
+    transform: translateY(100%);
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#figmaDiv7:hover #toolTipText7 {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*8*/
+#toolTipText8 {
+    width: fit-content;
+
+    font-weight: bold;
+    color: white;
+
+    background-color: #20c997;
+    padding: 7px;
+    border-radius: 10px;
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+
+    transform: translateY(100%);
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#figmaDiv8:hover #toolTipText8 {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*<!------------------------------------------ Education --------------------------------------------------->*/
+
+#mSectionEducation {
+    /*background-color: #F3FE9C;*/
+}
+
+#mSectionEducationSub1 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F3FE9C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    padding: 35px 10%;
+}
+
+div .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+.col header2.title {
+    color: #11a372;
+    padding: 0 0 20px 30px;
+}
+
+.col .contents {
+    padding: 0px 30px;
+    border-left: 2px solid #bababa;
+}
+
+.col .contents .box {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-bottom: 20px;
+}
+
+.col .contents .box:hover {
+    box-shadow: 0 3px 12px 0 #ccc;
+    border: 1px solid transparent;
+}
+
+.col .contents .box::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: -1px;
+    right: calc(100% + 24px);
+    background-color: #11a372;
+    border: 1px solid white;
+}
+
+.box h4 {
+    position: relative;
+    color: #11a372;
+}
+
+.box h3 {
+    font-size: 19px;
+    padding: 10px 0 6px;
+    color: #444;
+}
+
+.box p {
+    line-height: 1.2;
+    color: #666;
+    font-size: 17px;
+}
+
+/*<!------------------------------------------ Projects --------------------------------------------------->*/
+
+#mSectionProjects {
+    position: relative;
+}
+
+#mSectionProjects>h3 {
+    text-align: center;
+}
+
+#mSectionProjectsSub01>div {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#mSectionProjectsSub01>div>div {
+    padding: 50px;
+    position: relative;
+    left: 60px;
+}
+
+#mSectionProjectsSub01>div>div>img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+#mSectionProjectsSub01>div>div>span {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#span1 {
+    position: relative;
+    top: 140px;
+    right: 250px;
+}
+
+#span2 {
+    position: relative;
+    top: 140px;
+    right: 250px;
+}
+
+#span3 {
+    position: relative;
+    top: 160px;
+    right: 250px;
+}
+
+#span4 {
+    position: relative;
+    top: 160px;
+    right: 250px;
+}
+
+#mSectionProjects>button {
+    width: fit-content;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/*<!------------------------------------------ Assignments --------------------------------------------------->*/
+
+#mSectionAssignments {
+    position: relative;
+}
+
+#mSectionAssignments>h4 {
+    text-align: center;
+}
+
+#mSectionAssignmentsSub01 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#mSectionAssignmentsSub02 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#mSectionAssignmentsSub01>div>img {
+    width: 390px;
+    border: 2px solid #bcbebf;
+    border-radius: 10px;
+}
+
+#mSectionAssignmentsSub02>div>img {
+    width: 390px;
+    border: 2px solid #bcbebf;
+    border-radius: 10px;
+}
+
+#mSectionAssignmentsSub01>div>img:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+    border: 3px solid yellowgreen;
+}
+
+#mSectionAssignmentsSub02>div>img:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+    border: 3px solid yellowgreen;
+}
+
+#mSectionAssignments>button {
+    width: fit-content;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/*<!------------------------------------------ Contact --------------------------------------------------->*/
+
+#mSectionContactSub1 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#mSectionContactSub1>div {
+    border-top: 3px solid #bb2d3b;
+    border-bottom: 3px solid yellowgreen;
+    border-left: 3px solid blue;
+    border-right: 3px solid orange;
+
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+
+    position: relative;
+    right: 30px;
+}
+
+#mSectionContactSub1>div:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+    background-color: #4f5050;
+}
+
+#mSectionContactSub1>div>a {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/*<!------------------------------------------ Button Style --------------------------------------------------->*/
+
+.btnStyle {
+    border: 3px solid #0dcaf0;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #0dcaf0;
+    background-color: #31333B;
+}
+
+.btnStyle:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+/*<!------------------------------------------ Title text --------------------------------------------------->*/
+
+.titleTextDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleTextDiv>h1 {
+    position: relative;
+    color: #31333B;
+    font-size:4vw;
+    -webkit-text-stroke: 0.1vw white;
+    border-bottom: 3px solid #20c997;
+
+}
+
+.titleTextDiv>h1:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #01fe87;
+    font-weight: bolder;
+    -webkit-text-stroke: 0vw #383d52;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+
+}
+
+@keyframes animate {
+
+    0%,10%,100% {
+        width: 0;
+    }
+
+    70% {
+        width: 100%;
+    }
+}
+
+
+/*//////////////////////////////////////////// Main 02 ////////////////////////////////////////////////////////////*/
+
+#main_02 {
+    position: relative;
+}
+
+#main_02>div {
+    width: 100%;
+    min-height: 700px;
+    background-color: #ECEEED;
+
+    position: relative;
+    top: 50px;
+}
+
+#m2SectionContact {
+    width: 900px;
+    height: fit-content;
+
+    position: relative;
+    top: 70px;
+    left: 200px;
+}
+
+#m2SectionContactSub1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+#m2SectionContactSub1>div:nth-child(2)>img {
+    position: relative;
+    top: 50px;
+}
+
+/*#m2SectionContactSub1>div>form>button {*/
+/*    color: red;*/
+/*}*/
+
+#m2SectionContactSub1>div>form>div>input {
+    width: 350px;
+}
+
+#m2SectionContactSub1>div>form>div>textarea {
+    width: 350px;
+    height: 200px;
+}
+
+
+/*//////////////////////////////////////////// Main 03 ////////////////////////////////////////////////////////////*/
+
+#m3SectionProjects {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ECEEED;
+}
+
+#m3SectionProjectsSub1 {
+    width: 1000px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 0;
+    margin: auto;
+}
+
+#m3SectionProjects>h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: 30px;
+
+    font-size: 30px;
+    color: #0dcaf0;
+}
+
+.projectClass {
+    border: 1px solid transparent;
+    box-shadow: 0 3px 12px 0 #ccc;
+
+    width: fit-content;
+    height: fit-content;
+
+    /*margin-top: 100px;*/
+    /*padding-left: 100px;*/
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+}
+
+.projectClass>div>img {
+    width: 500px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.projectClass>div>h4 {
+    color: #11a372;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.projectClass>div>p {
+    line-height: 1.2;
+    font-size: 17px;
+}
+
+.projectClass>div>button {
+    border: 3px solid saddlebrown;
+    border-radius: 10px;
+    padding: 6px;
+    color: papayawhip;
+    background-color: #4f5050;
+    font-weight: bold;
+}
+
+.projectClass>div>button:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+

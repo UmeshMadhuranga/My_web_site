@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+
+    <style>
+
+        #m3SectionProjects {
+            width: 100%;
+            min-height: 100vh;
+            background-color: #ECEEED;
+        }
+
+        #m3SectionProjectsSub1 {
+            width: 1000px;
+            height: fit-content;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row-gap: 30px;
+
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100px;
+            bottom: 0;
+            margin: auto;
+        }
+
+        #m3SectionProjects>h3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 30px;
+            color: #0dcaf0;
+        }
+
+        .projectClass {
+            border: 1px solid transparent;
+            box-shadow: 0 3px 12px 0 #ccc;
+
+            width: fit-content;
+            height: fit-content;
+
+            /*margin-top: 100px;*/
+            /*padding-left: 100px;*/
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 50px;
+        }
+
+        .projectClass>div>img {
+            width: 500px;
+            border: 3px solid black;
+            border-radius: 10px;
+        }
+
+        .projectClass>div>h4 {
+            color: #11a372;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .projectClass>div>p {
+            line-height: 1.2;
+            font-size: 17px;
+        }
+
+        .projectClass>div>button {
+            border: 3px solid saddlebrown;
+            border-radius: 10px;
+            padding: 6px;
+            color: papayawhip;
+            background-color: #4f5050;
+            font-weight: bold;
+        }
+
+        .projectClass>div>button:hover {
+            transition: 0.5s;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <section id="m3SectionProjects">
+
+        <h3>Projects</h3>
+
+        <section id="m3SectionProjectsSub1">
+
+            <div class="projectClass">
+
+                <div>
+
+                    <img src="assests/images/SubhashPharmacy%2002.png">
+
+                </div>
+
+                <div>
+
+                    <h4>POS System</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci architecto est ipsam minima
+                        molestiae officia quas quidem repellendus suscipit?
+                    </p>
+                    <button>Load Project</button>
+
+                </div>
+
+
+            </div>
+
+            <div class="projectClass">
+
+                <div>
+
+                    <img src="assests/images/SubhashPharmacy%2002.png">
+
+                </div>
+
+                <div>
+
+                    <h4>POS System</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci architecto est ipsam minima
+                        molestiae officia quas quidem repellendus suscipit?</p>
+                    <button>Load Project</button>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </section>
+
+</body>
+</html>

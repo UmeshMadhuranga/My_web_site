@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            padding: 35px 10%;
+        }
+
+        main.row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 20px;
+        }
+
+        .col header.title {
+            color: #11a372;
+            padding: 0 0 20px 30px;
+        }
+
+        .col .contents {
+            padding: 0px 30px;
+            border-left: 2px solid #bababa;
+        }
+
+        .col .contents .box {
+            position: relative;
+            padding: 20px;
+            border: 1px solid #eaeaea;
+            background-color: #ffffff;
+            cursor: pointer;
+            transition: all 0.4s;
+            margin-bottom: 20px;
+        }
+
+        .col .contents .box:hover {
+            box-shadow: 0 3px 12px 0 #ccc;
+            border: 1px solid transparent;
+        }
+
+        .col .contents .box::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            right: calc(100% + 23px);
+            top: 0;
+            background-color: #11a372;
+            border: 1px solid white;
+        }
+
+        .box h4 {
+            position: relative;
+            color: #11a372;
+        }
+
+        .box h3 {
+            font-size: 19px;
+            padding: 10px 0 6px;
+            color: #444;
+        }
+
+        .box p {
+            line-height: 1.2;
+            color: #666;
+            font-size: 17px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <main class="row">
+
+        <section class="col">
+
+            <header class="title">
+
+                <h2>Education</h2>
+
+            </header>
+
+                <div class="contents">
+
+                    <div class="box">
+
+                        <h4>2018</h4>
+                        <h3>School</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, repudiandae!</p>
+
+                    </div>
+
+                    <div class="box">
+
+                        <h4>2018</h4>
+                        <h3>School</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, repudiandae!</p>
+
+                    </div>
+
+                </div>
+
+        </section>
+
+        <section class="col">
+
+            <header class="title">
+
+                <h2>Experience</h2>
+
+            </header>
+
+                <div class="contents">
+
+                    <div class="box">
+
+                        <h4>2018</h4>
+                        <h3>School</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, repudiandae!</p>
+
+                    </div>
+
+                    <div class="box">
+
+                        <h4>2018</h4>
+                        <h3>School</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, repudiandae!</p>
+
+                    </div>
+
+                </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
