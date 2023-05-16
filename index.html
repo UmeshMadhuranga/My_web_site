@@ -15,8 +15,22 @@
 
     <link rel="stylesheet" href="styles/styles.css">
 
+<!--    import ADS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--    import ADS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="stylesheet" href="styles/preloader.css">
+
 </head>
 <body>
+
+<div id="pre-loader">
+
+    <img src="assests/images/PreLoader.gif">
+
+</div>
 
     <!------------------------------------------ Header --------------------------------------------------->
 
@@ -36,6 +50,7 @@
                 <button class="hButton" id="btnProjects">Projects</button>
                 <button class="hButton" id="btnGallery">Gallery</button>
                 <button class="hButton" id="btnContact">Contact</button>
+                <i class="fa-solid fa-bars"></i>
 
             </div>
 
@@ -64,7 +79,7 @@
               with
               Front end Development Skills.</span>
 
-                            <button type="button">Contact me</button>
+                            <button type="button" class="animate__animated animate__bounce animate__repeat-2">Contact me</button>
 
                         </pre>
 
@@ -72,7 +87,7 @@
 
                 </section>
 
-                <section id="mSection01SubSection02">
+                <section id="mSection01SubSection02" data-aos="fade-down">
 
                     <input type="image" src="assests/images/01.png" width="500px">
 
@@ -88,23 +103,27 @@
 
         <section id="mSectionAboutMe">
 
-            <div class="titleTextDiv">
+            <div>
 
-                <h1 data-text="About_me" class="titleText">About_me</h1>
+                <div class="titleTextDiv">
+
+                    <h1 data-text="About_me" class="titleText">About_me</h1>
+
+                </div>
+                <br>
+
+                <pre>
+
+          I’m a Front End Developer located in Sri Lanka. I have a serious passions for UI effects, animations
+          and creating intuitive, dynamic user experiences.
+
+          Well - organised person , problem solver , independent employee with high attention to deal.
+
+          Let’s make something special.
+
+                </pre>
 
             </div>
-            <br>
-
-            <pre>
-
-                I’m a Front End Developer located in Sri Lanka. I have a serious passions for UI effects, animations
-                and creating intuitive, dynamic user experiences.
-
-                Well - organised person , problem solver , independent employee with high attention to deal.
-
-                Let’s make something special.
-
-            </pre>
 
         </section>
         <br>
@@ -121,28 +140,28 @@
 
             <section id="mSectionSkillsSub01">
 
-                <div class="skillSet" style="position: relative" id="figmaDiv1">
+                <div class="skillSet" style="position: relative" id="figmaDiv1" data-aos="flip-up">
 
                     <span id="toolTipText1">Figma</span>
                     <img src="assests/icons/icons8-figma-340.png">
 
                 </div>
 
-                <div class="skillSet" style="position: relative" id="figmaDiv2">
+                <div class="skillSet" style="position: relative" id="figmaDiv2" data-aos="flip-up">
 
                     <span id="toolTipText2">Java</span>
                     <img src="assests/icons/icons8-java-480.png">
 
                 </div>
 
-                <div class="skillSet" style="position: relative" id="figmaDiv4">
+                <div class="skillSet" style="position: relative" id="figmaDiv4" data-aos="flip-up">
 
                     <span id="toolTipText4">MySql</span>
                     <img src="assests/icons/icons8-mysql-logo-480%20(3).png">
 
                 </div>
 
-                <div class="skillSet" style="position: relative" id="figmaDiv5">
+                <div class="skillSet" style="position: relative" id="figmaDiv5" data-aos="flip-up">
 
                     <span id="toolTipText5">Googling</span>
                     <img src="assests/icons/icons8-google-240.png">
@@ -154,28 +173,28 @@
 
             <section id="mSectionSkillsSub02">
 
-                <div class="skillSet1" style="position: relative" id="figmaDiv6">
+                <div class="skillSet1" style="position: relative" id="figmaDiv6" data-aos="flip-up">
 
                     <span id="toolTipText6">HTML</span>
                     <img src="assests/icons/html-5%20icon.png">
 
                 </div>
 
-                <div class="skillSet1" style="position: relative" id="figmaDiv7">
+                <div class="skillSet1" style="position: relative" id="figmaDiv7" data-aos="flip-up">
 
                     <span id="toolTipText7">CSS</span>
                     <img src="assests/icons/css3%20icon.png">
 
                 </div>
 
-                <div class="skillSet1"  style="position: relative" id="figmaDiv8">
+                <div class="skillSet1"  style="position: relative" id="figmaDiv8" data-aos="flip-up">
 
                     <span id="toolTipText8">Java Script</span>
                     <img src="assests/icons/javascript%20icon.png">
 
                 </div>
 
-                <div class="skillSet" style="position: relative" id="figmaDiv3">
+                <div class="skillSet" style="position: relative" id="figmaDiv3" data-aos="flip-up">
 
                     <span id="toolTipText3">Photo Shop</span>
                     <img src="assests/icons/icons8-adobe-photoshop-480.png">
@@ -290,28 +309,28 @@
 
                     <div>
 
-                        <img src="assests/images/Projects1.jpg" width="400px">
+                        <img src="assests/images/Projects1.jpg">
                         <span id="span1">POS System</span>
 
                     </div>
 
                     <div>
 
-                        <img src="assests/images/Projects2.jpg" width="400px">
+                        <img src="assests/images/Projects2.jpg">
                         <span id="span2">Web Projects</span>
 
                     </div>
 
                     <div>
 
-                        <img src="assests/images/Projects3.jpg" width="400px">
+                        <img src="assests/images/Projects3.jpg">
                         <span id="span4">Course Works</span>
 
                     </div>
 
                     <div>
 
-                        <img src="assests/images/Projects4.jpg" width="400px">
+                        <img src="assests/images/Projects4.jpg">
                         <span id="span3">Other Projects</span>
 
                     </div>
@@ -351,10 +370,6 @@
                 <div>
                     <img src="assests/images/assignments/As1.png">
                 </div>
-
-            </section>
-            <br><br>
-            <section id="mSectionAssignmentsSub02">
 
                 <div>
                     <img src="assests/images/assignments/As3.png">
@@ -432,7 +447,10 @@
 
         <section id="m2SectionContact">
 
-            <h3>Contact Me</h3>
+            <h3>Contact Me..</h3>
+            <br>
+            <span>Fill out the form and I'll be in touch as soon as possible.</span>
+            <br><br><br>
 
             <section id="m2SectionContactSub1">
 
@@ -472,7 +490,7 @@
 
                 <div>
 
-                    <img src="assests/images/Contact%20image.jpg" width="300px">
+                    <img src="assests/images/Contact%20me2.png">
 
                 </div>
 
@@ -559,6 +577,8 @@
         })
     </script>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
 
         document.getElementById("btnAbout").addEventListener('click', function () {
@@ -590,6 +610,16 @@
 
             $('#navBar').css("background-color", "#ECEEED");
         })
+
+        AOS.init();   //import ADs
+
+        // pre loader set up
+        $(document).ready( () => {
+            setTimeout( () => {
+                $('#pre-loader').css("display", "none");
+            }, 3000)
+        })
+
 
     </script>
 

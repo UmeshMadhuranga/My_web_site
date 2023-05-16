@@ -6,6 +6,7 @@
 
 body {
     background-color: #31333B;
+    overflow-x: hidden;
 }
 
 header {
@@ -65,11 +66,14 @@ header>section>div>button {
     font-weight: bold;
 }
 
+header>section>div>i {
+    visibility: hidden;
+}
+
 header>section>div>button:hover {
     transition: 0.5s;
-    transform: scale(1.1);
+    transform: scale(1.1) translateY(-7%);
     color: navajowhite;
-    transform: translateY(-7%);
 }
 
 /*<!-------------------------------------- End of the header ---------------------------------------------->*/
@@ -92,10 +96,12 @@ header>section>div>button:hover {
 main>section {
     position: relative;
     top: 70px;
+
 }
 
 #mSection01 {
-    width: 1150px;
+    width: fit-content;
+    height: fit-content;
     /*border: 1px solid red;*/
 
     position: relative;
@@ -107,8 +113,9 @@ main>section {
 }
 
 #mSection01>div {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 200px;
 }
 
 #mSection01SubSection01>div {
@@ -143,11 +150,26 @@ main>section {
 
 #mSectionAboutMe {
     position: relative;
+
+    width: 100%;
+    height: 70vh;
 }
 
-#mSectionAboutMe>pre {
+#mSectionAboutMe>div:first-child {
+
+    width: fit-content;
+    min-height: fit-content;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+}
+
+#mSectionAboutMe>div>pre {
     color: white;
-    font-size: 15px;
+    font-size: 1.3vw;
     font-weight: bolder;
     line-height: 30px;
 }
@@ -157,6 +179,10 @@ main>section {
 /*}*/
 
 /*<!------------------------------------------ Skills --------------------------------------------------->*/
+
+#mSectionSkills {
+
+}
 
 #mSectionSkills>h4 {
     text-align: center;
@@ -187,6 +213,7 @@ main>section {
 
     font-weight: bold;
     color: white;
+
 
     background-color: #20c997;
     padding: 7px;
@@ -417,6 +444,7 @@ main>section {
 
 #mSectionEducation {
     /*background-color: #F3FE9C;*/
+
 }
 
 #mSectionEducationSub1 {
@@ -436,7 +464,7 @@ main>section {
 div .row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 20px;
+    grid-column-gap: 100px;
 }
 
 .col header2.title {
@@ -499,15 +527,29 @@ div .row {
     position: relative;
 }
 
-#mSectionProjects>h3 {
-    text-align: center;
+/*#mSectionProjects>h3 {*/
+/*    text-align: center;*/
+/*}*/
+
+#mSectionProjectsSub01 {
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
 }
 
+
 #mSectionProjectsSub01>div {
+
     width: fit-content;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 #mSectionProjectsSub01>div>div {
@@ -516,9 +558,18 @@ div .row {
     left: 60px;
 }
 
+#mSectionProjectsSub01>div>div>img {
+    width: 300px;
+
+    border: 5px solid #F3FE9C;
+}
+
 #mSectionProjectsSub01>div>div>img:hover {
     transform: scale(1.1);
     transition: 0.5s;
+    cursor: pointer;
+
+    border: 5px solid #79860f;
 }
 
 #mSectionProjectsSub01>div>div>span {
@@ -529,26 +580,26 @@ div .row {
 
 #span1 {
     position: relative;
-    top: 140px;
-    right: 250px;
+    top: 110px;
+    right: 190px;
 }
 
 #span2 {
     position: relative;
-    top: 140px;
-    right: 250px;
+    top: 110px;
+    right: 190px;
 }
 
 #span3 {
     position: relative;
-    top: 160px;
-    right: 250px;
+    top: 120px;
+    right: 190px;
 }
 
 #span4 {
     position: relative;
-    top: 160px;
-    right: 250px;
+    top: 120px;
+    right: 190px;
 }
 
 #mSectionProjects>button {
@@ -557,6 +608,7 @@ div .row {
     position: absolute;
     left: 0;
     right: 0;
+    bottom: 0;
     margin: auto;
 }
 
@@ -571,34 +623,23 @@ div .row {
 }
 
 #mSectionAssignmentsSub01 {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
 }
 
-#mSectionAssignmentsSub02 {
-    display: flex;
-    justify-content: space-evenly;
+#mSectionAssignmentsSub01>div {
+    padding: 10px;
 }
 
 #mSectionAssignmentsSub01>div>img {
-    width: 390px;
-    border: 2px solid #bcbebf;
-    border-radius: 10px;
-}
-
-#mSectionAssignmentsSub02>div>img {
-    width: 390px;
+    width: 30vw;
     border: 2px solid #bcbebf;
     border-radius: 10px;
 }
 
 #mSectionAssignmentsSub01>div>img:hover {
-    transform: scale(1.05);
-    transition: 0.5s;
-    border: 3px solid yellowgreen;
-}
-
-#mSectionAssignmentsSub02>div>img:hover {
     transform: scale(1.05);
     transition: 0.5s;
     border: 3px solid yellowgreen;
@@ -615,9 +656,13 @@ div .row {
 
 /*<!------------------------------------------ Contact --------------------------------------------------->*/
 
+#mSectionContact {
+
+}
+
 #mSectionContactSub1 {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 #mSectionContactSub1>div {
@@ -626,13 +671,16 @@ div .row {
     border-left: 3px solid blue;
     border-right: 3px solid orange;
 
+    width: fit-content;
+    height: fit-content;
+
     color: white;
     font-weight: bold;
     font-size: 15px;
     padding: 10px;
 
     position: relative;
-    right: 30px;
+    left: 150px;
 }
 
 #mSectionContactSub1>div:hover {
@@ -714,7 +762,7 @@ div .row {
 
 #main_02>div {
     width: 100%;
-    min-height: 700px;
+    min-height: 130vh;
     background-color: #ECEEED;
 
     position: relative;
@@ -722,22 +770,37 @@ div .row {
 }
 
 #m2SectionContact {
-    width: 900px;
+    width: fit-content;
     height: fit-content;
 
-    position: relative;
-    top: 70px;
-    left: 200px;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#m2SectionContact h3 {
+    font-weight: bold;
+    font-size: 3vw;
+}
+
+#m2SectionContact span {
+    font-weight: bold;
+    font-size: 18px;
 }
 
 #m2SectionContactSub1 {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 #m2SectionContactSub1>div:nth-child(2)>img {
     position: relative;
-    top: 50px;
+    /*top: 50px;*/
+
+    width: 500px;
+
 }
 
 /*#m2SectionContactSub1>div>form>button {*/
@@ -748,9 +811,22 @@ div .row {
     width: 350px;
 }
 
+#m2SectionContactSub1>div>form>div>input:hover {
+    background-color: rgba(243, 254, 156, 0.85);
+}
+
+#m2SectionContactSub1>div>form>div>label {
+    color: purple;
+    font-weight: bold;
+}
+
 #m2SectionContactSub1>div>form>div>textarea {
     width: 350px;
     height: 200px;
+}
+
+#m2SectionContactSub1>div>form>div>textarea:hover {
+    background-color: rgba(243, 254, 156, 0.85);
 }
 
 
@@ -834,6 +910,232 @@ div .row {
     transition: 0.5s;
     transform: scale(1.1);
     cursor: pointer;
+}
+
+
+/*//////////////////////////////////////////////.......Media........./////////////////////////////////////////////*/
+
+@media all and (max-width: 800px){
+
+    header>section>div>button {
+        display: none;
+    }
+
+    header>section>div>i {
+        visibility: unset;
+        color: white;
+
+        position: relative;
+        right: 10px;
+
+        cursor: pointer;
+    }
+
+    #mSection01>div {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #mSection01SubSection01 {
+        grid-column: 1;
+        grid-row: 2/3;
+    }
+
+    #mSection01SubSection02>input {
+        width: 400px;
+
+        position: relative;
+        left: 5vw;
+
+        border-radius: 100%;
+        border-bottom: 10px solid;
+        border-top: 5px solid #383d49;
+    }
+
+
+    /*<!-------------------------------------- End of the header ---------------------------------------------->*/
+
+
+    /*<!-------------------------------------- About me ---------------------------------------------->*/
+
+    #mSectionAboutMe>div>pre {
+        line-height: 15px;
+        font-size: 1.5vw;
+    }
+
+    /*<!------------------------------------------ Skills --------------------------------------------------->*/
+
+    .skillSet>img {
+        width: 100px;
+    }
+
+    .skillSet1>img {
+        width: 80px;
+    }
+
+    #toolTipText1 {
+        font-size: 10px;
+    }
+
+    #toolTipText2 {
+        font-size: 10px;
+    }
+
+    #toolTipText3 {
+        font-size: 10px;
+    }
+
+    #toolTipText4 {
+        font-size: 10px;
+    }
+
+    #toolTipText5 {
+        font-size: 10px;
+    }
+
+    #toolTipText6 {
+        font-size: 10px;
+    }
+
+    #toolTipText7 {
+        font-size: 10px;
+    }
+
+    #toolTipText8 {
+        font-size: 10px;
+    }
+
+    /*<!------------------------------------------ Education --------------------------------------------------->*/
+
+    div .row {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 50px;
+    }
+
+    .box h4 {
+        font-size: 17px;
+        position: relative;
+        color: #11a372;
+    }
+
+    .box h3 {
+        font-size: 15px;
+        padding: 10px 0 6px;
+        color: #444;
+    }
+
+    .box p {
+        line-height: 1.2;
+        color: #666;
+        font-size: 11px;
+    }
+
+
+    /*<!------------------------------------------ Projects --------------------------------------------------->*/
+
+    #mSectionProjectsSub01>div {
+
+        width: fit-content;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1, 1fr);
+
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    #mSectionProjectsSub01>div>div>img {
+        width: 200px;
+    }
+
+    #mSectionProjectsSub01 {
+        height: 180vh;
+    }
+
+    #span1 {
+        position: relative;
+        top: 80px;
+        right: 140px;
+    }
+
+    #span2 {
+        position: relative;
+        top: 80px;
+        right: 140px;
+    }
+
+    #span3 {
+        position: relative;
+        top: 90px;
+        right: 150px;
+    }
+
+    #span4 {
+        position: relative;
+        top: 90px;
+        right: 150px;
+    }
+
+    /*<!------------------------------------------ Assignments --------------------------------------------------->*/
+
+    #mSectionAssignmentsSub01 {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 7px;
+        row-gap: 7px;
+
+        position: relative;
+        left: 10px;
+    }
+
+    #mSectionAssignmentsSub01>div>img {
+        width: 40vw;
+    }
+
+
+    /*<!------------------------------------------ Contact --------------------------------------------------->*/
+
+    #mSectionContactSub1 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 40px;
+    }
+
+    #mSectionContactSub1>div>a {
+        font-size: 14px;
+    }
+
+    #mSectionContactSub1>div:first-child {
+        left: 30vw;
+    }
+
+    #mSectionContactSub1>div:nth-child(2) {
+        left: 37vw;
+    }
+
+    #mSectionContactSub1>div:nth-child(3) {
+        left: 34vw;
+    }
+
+
+    /*//////////////////////////////////////////// Main 02 ////////////////////////////////////////////////////////////*/
+
+    #m2SectionContactSub1>div:nth-child(2)>img {
+        display: none;
+    }
+
+    #m2SectionContact h3 {
+        font-size: 3vw;
+    }
+
+    #m2SectionContact span {
+        font-size: 12px;
+    }
+
 }
 
 
