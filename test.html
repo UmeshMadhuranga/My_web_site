@@ -9,80 +9,54 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            width: 100%;
             min-height: 100vh;
-            background-color: #fafafa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background-color: #0c192c;
         }
 
         .container {
+            position: relative;
             width: 100%;
-            padding: 35px 10%;
+            height: 100vh;
+            overflow: hidden;
         }
 
-        main.row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-column-gap: 20px;
-        }
-
-        .col header.title {
-            color: #11a372;
-            padding: 0 0 20px 30px;
-        }
-
-        .col .contents {
-            padding: 0px 30px;
-            border-left: 2px solid #bababa;
-        }
-
-        .col .contents .box {
+        .bubbles {
             position: relative;
-            padding: 20px;
-            border: 1px solid #eaeaea;
-            background-color: #ffffff;
-            cursor: pointer;
-            transition: all 0.4s;
-            margin-bottom: 20px;
+            display: flex;
         }
 
-        .col .contents .box:hover {
-            box-shadow: 0 3px 12px 0 #ccc;
-            border: 1px solid transparent;
-        }
-
-        .col .contents .box::before {
-            content: '';
-            position: absolute;
-            width: 16px;
-            height: 16px;
+        .bubbles span {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            background-color: #4fc3dc;
+            margin: 0 4px;
             border-radius: 50%;
-            right: calc(100% + 23px);
-            top: 0;
-            background-color: #11a372;
-            border: 1px solid white;
+            box-shadow: 0 0 0 10px #4fc3dc44,
+            0 0 50px #4fc3dc,
+            0 0 100px #4fc3dc;
+            animation: animate linear infinite;
+            animation-duration: calc(200s/var(--i));
         }
 
-        .box h4 {
-            position: relative;
-            color: #11a372;
+        .bubbles span:nth-child(even) {
+            background-color: #ff2d74;
+            box-shadow: 0 0 0 10px #ff2d7444,
+            0 0 50px #ff2d74,
+            0 0 100px #ff2d74;
         }
 
-        .box h3 {
-            font-size: 19px;
-            padding: 10px 0 6px;
-            color: #444;
-        }
-
-        .box p {
-            line-height: 1.2;
-            color: #666;
-            font-size: 17px;
+        @keyframes animate {
+            0% {
+                transform: translateY(100vh)scale(0);
+            }
+            100% {
+                transform: translateY(-100vh)scale(1);
+            }
         }
 
     </style>
@@ -90,73 +64,27 @@
 </head>
 <body>
 
-<div class="container">
-
-    <main class="row">
-
-        <section class="col">
-
-            <header class="title">
-
-                <h2>Education</h2>
-
-            </header>
-
-                <div class="contents">
-
-                    <div class="box">
-
-                        <h4>2018</h4>
-                        <h3>School</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, repudiandae!</p>
-
-                    </div>
-
-                    <div class="box">
-
-                        <h4>2018</h4>
-                        <h3>School</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, repudiandae!</p>
-
-                    </div>
-
-                </div>
-
-        </section>
-
-        <section class="col">
-
-            <header class="title">
-
-                <h2>Experience</h2>
-
-            </header>
-
-                <div class="contents">
-
-                    <div class="box">
-
-                        <h4>2018</h4>
-                        <h3>School</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, repudiandae!</p>
-
-                    </div>
-
-                    <div class="box">
-
-                        <h4>2018</h4>
-                        <h3>School</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, repudiandae!</p>
-
-                    </div>
-
-                </div>
-
-        </section>
-
-    </main>
-
-</div>
+    <div class="container">
+        <div class="bubbles">
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:18;"></span>
+        </div>
+    </div>
 
 </body>
 </html>
