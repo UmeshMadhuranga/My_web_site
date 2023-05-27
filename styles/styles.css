@@ -1,7 +1,6 @@
 * {
     font-family: 'Alkatra', cursive;
     font-family: 'Ubuntu', sans-serif;
-    /*font-weight: bold;*/
 }
 
 body {
@@ -91,7 +90,51 @@ header>section>div>button:hover {
 
 
 /*<!-------------------------------------- Mains ---------------------------------------------->*/
+#bubbleSection {
+    position: absolute;
+}
 
+.bubbleDiv {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: bubbleAnimate linear infinite;
+    animation-duration: calc(200s/var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background-color: #ff2d74;
+    box-shadow: 0 0 0 10px #ff2d7444,
+    0 0 50px #ff2d74,
+    0 0 100px #ff2d74;
+}
+
+@keyframes bubbleAnimate {
+    0% {
+        transform: translateY(100vh)scale(0);
+    }
+    100% {
+        transform: translateY(-100vh)scale(1);
+    }
+}
 
 main>section {
     position: relative;
@@ -122,7 +165,7 @@ main>section {
     /*border: 1px solid;*/
     height: fit-content;
 
-    background-color: #31333B;
+    /*background-color: #31333B;*/
 
     position: absolute;
     top: 0;
@@ -173,10 +216,6 @@ main>section {
     font-weight: bolder;
     line-height: 30px;
 }
-
-/*#mSectionAboutMe>h3 {*/
-/*    text-align: center;*/
-/*}*/
 
 /*<!------------------------------------------ Skills --------------------------------------------------->*/
 
@@ -527,10 +566,6 @@ div .row {
     position: relative;
 }
 
-/*#mSectionProjects>h3 {*/
-/*    text-align: center;*/
-/*}*/
-
 #mSectionProjectsSub01 {
     width: 100vw;
     height: 100vh;
@@ -615,7 +650,10 @@ div .row {
 /*<!------------------------------------------ Assignments --------------------------------------------------->*/
 
 #mSectionAssignments {
+    min-height: 100vh;
     position: relative;
+    box-sizing: border-box;
+    background: #90A2AE;
 }
 
 #mSectionAssignments>h4 {
@@ -623,35 +661,92 @@ div .row {
 }
 
 #mSectionAssignmentsSub01 {
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 10px;
-    row-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
-#mSectionAssignmentsSub01>div {
-    padding: 10px;
-}
+/*                                        flip card                                            */
 
-#mSectionAssignmentsSub01>div>img {
+.flip_card {
     width: 30vw;
-    border: 2px solid #bcbebf;
-    border-radius: 10px;
+    height: fit-content;
 }
 
-#mSectionAssignmentsSub01>div>img:hover {
-    transform: scale(1.05);
-    transition: 0.5s;
-    border: 3px solid yellowgreen;
+.flip_card:hover .card {
+    cursor: pointer;
+    transform: rotateY(180deg);
 }
 
-#mSectionAssignments>button {
-    width: fit-content;
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+    border: none;
+}
 
+.front {
+    width: 30vw;
+    height: fit-content;
+
+    border-radius: 2rem;
     position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
+    backface-visibility: hidden;
+}
+
+.front img{
+    width: 30vw;
+    backface-visibility: hidden;
+    border: 3px solid;
+    border-radius: 2rem;
+
+}
+
+.back {
+    width: 30vw;
+    height: fit-content;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    border-radius: 2rem;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.back img{
+    width: 30vw;
+    backface-visibility: hidden;
+    opacity: 0.5;
+    border: 3px solid;
+    border-radius: 2rem;
+}
+
+.back p{
+    position: relative;
+    bottom: 150px;
+    left: 30px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.back a{
+    position: relative;
+    bottom: 150px;
+    text-decoration: none;
+    border: none;
+    background: transparent;
+    font-weight: bold;
+    font-size: 18px;
+    color: blue;
 }
 
 /*<!------------------------------------------ Contact --------------------------------------------------->*/
@@ -797,15 +892,9 @@ div .row {
 
 #m2SectionContactSub1>div:nth-child(2)>img {
     position: relative;
-    /*top: 50px;*/
-
     width: 500px;
 
 }
-
-/*#m2SectionContactSub1>div>form>button {*/
-/*    color: red;*/
-/*}*/
 
 #m2SectionContactSub1>div>form>div>input {
     width: 350px;

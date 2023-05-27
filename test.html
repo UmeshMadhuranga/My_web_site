@@ -17,7 +17,7 @@
             background-color: #0c192c;
         }
 
-        .container {
+        .bubbleDiv {
             position: relative;
             width: 100%;
             height: 100vh;
@@ -39,7 +39,7 @@
             box-shadow: 0 0 0 10px #4fc3dc44,
             0 0 50px #4fc3dc,
             0 0 100px #4fc3dc;
-            animation: animate linear infinite;
+            animation: bubbleAnimate linear infinite;
             animation-duration: calc(200s/var(--i));
         }
 
@@ -50,7 +50,7 @@
             0 0 100px #ff2d74;
         }
 
-        @keyframes animate {
+        @keyframes bubbleAnimate {
             0% {
                 transform: translateY(100vh)scale(0);
             }
@@ -64,7 +64,7 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="bubbleDiv">
         <div class="bubbles">
             <span style="--i:11;"></span>
             <span style="--i:12;"></span>
