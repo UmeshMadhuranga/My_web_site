@@ -161,6 +161,162 @@ main>section {
     column-gap: 200px;
 }
 
+/*---------------------------------------------- btn jelly -------------------------------------------------------*/
+
+.A {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    top: 30%;
+}
+
+.B {
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 0;
+    position: relative;
+    bottom: 40px;
+    left: 90px;
+}
+
+.btnJelly {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 60px;
+    display: flex;
+    font-family: 'Alkatra', cursive;
+}
+
+.btnJelly:hover {
+    color: rgb(92, 255, 160);
+    animation: bounceJellyEffect 0.6s;
+}
+
+@keyframes bounceJellyEffect {
+    25% {
+        transform: scale(0.8, 1.3);
+    }
+    50% {
+        transform: scale(1.1, 0.8);
+    }
+    75% {
+        transform: scale(0.7, 1.2);
+    }
+}
+
+.U1 {
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+}
+
+.U {
+    position: absolute;
+    top: 7px;
+    left: 0;
+}
+
+.D {
+    position: absolute;
+    bottom: 1px;
+    left: 40px;
+}
+
+.E {
+    position: absolute;
+    top: 7px;
+    left: 40px;
+}
+
+.F {
+    position: absolute;
+    top: 7px;
+    left: 90px;
+}
+
+.G {
+    position: absolute;
+    top: 7px;
+    left: 117px;
+}
+
+.H {
+    position: absolute;
+    top: 7px;
+    left: 142px;
+}
+
+.I {
+    position: absolute;
+    top: 7px;
+    left: 200px;
+}
+
+.J {
+    position: absolute;
+    top: 7px;
+    left: 248px;
+}
+
+.K {
+    position: absolute;
+    top: 7px;
+    left: 280px;
+}
+
+.L {
+    position: absolute;
+    top: 7px;
+    left: 312px;
+}
+
+.M {
+    position: absolute;
+    top: 7px;
+    left: 345px;
+}
+
+.N {
+    position: absolute;
+    top: 7px;
+    left: 375px;
+}
+
+.O {
+    position: absolute;
+    top: 7px;
+    left: 400px;
+}
+
+.P {
+    position: absolute;
+    top: 7px;
+    left: 433px;
+}
+
+.Q {
+    position: absolute;
+    top: 7px;
+    left: 466px;
+}
+
+.R {
+    position: absolute;
+    top: 7px;
+    left: 499px;
+}
+
+.S {
+    position: absolute;
+    top: 7px;
+    left: 534px;
+}
+
+/*---------------------------------------------- btn jelly -------------------------------------------------------*/
+
 #mSection01SubSection01>div {
     /*border: 1px solid;*/
     height: fit-content;
@@ -177,7 +333,7 @@ main>section {
     position: relative;
 }
 
-#mSection01SubSection01>div>pre>button {
+.btnContact {
     border: 2px solid orangered;
     border-radius: 10px;
     background-color: #31333B;
@@ -185,8 +341,12 @@ main>section {
     font-weight: bold;
 
     position: absolute;
-    left: 60px;
+    left: 100px;
     margin: auto;
+}
+
+.btnContact:hover {
+    animation: none;
 }
 
 /*<!------------------------------------------ About Me --------------------------------------------------->*/
@@ -676,7 +836,7 @@ div .row {
     height: fit-content;
 }
 
-.flip_card:hover .card {
+#mSectionAssignmentsSub01 .flip_card:hover .card {
     cursor: pointer;
     transform: rotateY(180deg);
 }
@@ -1032,13 +1192,13 @@ div .row {
     }
 
     #mSection01SubSection02>input {
-        width: 400px;
+        width: 300px;
 
         position: relative;
         left: 5vw;
 
         border-radius: 100%;
-        border-bottom: 10px solid;
+        border-bottom: 6px solid;
         border-top: 5px solid #383d49;
     }
 
