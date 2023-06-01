@@ -31,7 +31,7 @@ header>section {
     margin: 10px;
 }
 
-header>section>div:first-child {
+#navbarDiv1 {
     width: fit-content;
     height: fit-content;
 
@@ -45,11 +45,102 @@ header>section>div:first-child {
     margin: auto;
 }
 
-header>section>div:nth-child(2) {
+/*---------------------------------------------------------- glow text nav bar ----------------------------------------*/
+
+#navBarUl {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    /*transform: translate(-50%,-50%);*/
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#navbarDiv2CloseSpan {
+    display: none;
+}
+
+#navBarUl .navBarLi {
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 7px;
+    text-shadow: none;
+    animation: glowanimation 1s infinite linear;
+}
+
+@keyframes glowanimation {
+    0% {
+        color: #484848;
+        text-shadow: none;
+    }
+    18% {
+        color: #484848;
+        text-shadow: none;
+    }
+    20% {
+        color: #fff900;
+        text-shadow: 0 0 7px #fff900,
+        0 0 20px #ff6c00;
+    }
+    30% {
+        color: #484848;
+        text-shadow: none;
+    }
+    35% {
+        color: #fff900;
+        text-shadow: 0 0 7px #fff900,
+        0 0 20px #ff6c00;
+    }
+    70% {
+        color: #484848;
+        text-shadow: none;
+    }
+    85% {
+        color: #fff900;
+        text-shadow: 0 0 7px #fff900,
+        0 0 20px #ff6c00;
+    }
+    90% {
+        color: #484848;
+        text-shadow: none;
+    }
+    100% {
+        color: #484848;
+        text-shadow: none;
+    }
+}
+
+#navBarUl .navBarLi:nth-child(1) {
+    animation-delay: 2s;
+}
+
+#navBarUl .navBarLi:nth-child(2) {
+    animation-delay: 4s;
+}
+
+#navBarUl .navBarLi:nth-child(3) {
+    animation-delay: 6s;
+}
+
+#navBarUl .navBarLi:nth-child(4) {
+    animation-delay: 8s;
+}
+
+#navBarUl .navBarLi:nth-child(5) {
+    animation-delay: 1s;
+}
+
+
+
+#navbarDiv2 {
     width: fit-content;
     height: fit-content;
 
     padding: 10px;
+
+    background: transparent;
 
     position: absolute;
     top: 0;
@@ -60,12 +151,12 @@ header>section>div:nth-child(2) {
 
 header>section>div>button {
     border: none;
-    background-color: #31333B;
+    background-color: transparent;
     color: white;
     font-weight: bold;
 }
 
-header>section>div>i {
+header>section>i {
     visibility: hidden;
 }
 
@@ -185,7 +276,8 @@ main>section {
     background-color: transparent;
     color: white;
     border: none;
-    font-size: 60px;
+    /*font-size: 60px;*/
+    font-size: 5vw;
     display: flex;
     font-family: 'Alkatra', cursive;
 }
@@ -893,9 +985,9 @@ div .row {
 .back p{
     position: relative;
     bottom: 150px;
-    left: 30px;
+    left: 20px;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 1vw;
 }
 
 .back a{
@@ -1161,21 +1253,119 @@ div .row {
     cursor: pointer;
 }
 
+/*//////////////////////////////////////////// Main 04 ////////////////////////////////////////////////////////////*/
+
+#main_04 {
+    background: #ecf4fb;
+    border: 3px solid red;
+}
+
+#m4SectionGallery {
+    background: #ecf4fb;
+    height: 100vh;
+}
+
+.image-gallery {
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 30px;
+}
+
+.image-gallery img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.image-gallery img:hover {
+    transform: scale(0.8) rotate(-15deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 7px rgba(68, 77, 136, 0.2);
+}
+
+.full-image {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.full-image img {
+    max-width: 500px;
+    width: 90%;
+}
+
+.full-image span {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myGallery {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -15%;
+    margin: auto;
+}
 
 /*//////////////////////////////////////////////.......Media........./////////////////////////////////////////////*/
 
-@media all and (max-width: 800px){
+@media all and (max-width: 768px){
 
-    header>section>div>button {
+    /*header>section>div>button {*/
+    /*    display: none;*/
+    /*}*/
+
+    #navbarDiv2 {
         display: none;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 140px;
+        /*left: -200%;*/
+        background: #2c3e50;
+        text-align: center;
+        transition: 0.5s;
     }
 
-    header>section>div>i {
+    #navbarDiv2CloseSpan {
+        display: unset;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+
+        position: absolute;
+        right: 5%;
+    }
+
+    header>section>div>button {
+        display: block;
+        padding-top: 60px;
+        background: transparent;
+        position: relative;
+        left:45vw;
+    }
+
+    header>section>i {
         visibility: unset;
         color: white;
 
         position: relative;
-        right: 10px;
+        left: 90vw;
+        top: 15px;
 
         cursor: pointer;
     }
@@ -1195,11 +1385,119 @@ div .row {
         width: 300px;
 
         position: relative;
-        left: 5vw;
+        left: 10vw;
 
         border-radius: 100%;
         border-bottom: 6px solid;
         border-top: 5px solid #383d49;
+    }
+
+    .U1 {
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+    }
+
+    .U {
+        position: absolute;
+        top: 7px;
+        left: 0;
+    }
+
+    .D {
+        position: absolute;
+        bottom: -10px;
+        left: 30px;
+    }
+
+    .E {
+        position: absolute;
+        top: 7px;
+        left: 23px;
+    }
+
+    .F {
+        position: absolute;
+        top: 7px;
+        left: 52px;
+    }
+
+    .G {
+        position: absolute;
+        top: 7px;
+        left: 69px;
+    }
+
+    .H {
+        position: absolute;
+        top: 7px;
+        left: 83px;
+    }
+
+    .I {
+        position: absolute;
+        top: 7px;
+        left: 120px;
+    }
+
+    .J {
+        position: absolute;
+        top: 7px;
+        left: 147px;
+    }
+
+    .K {
+        position: absolute;
+        top: 7px;
+        left: 166px;
+    }
+
+    .L {
+        position: absolute;
+        top: 7px;
+        left: 186px;
+    }
+
+    .M {
+        position: absolute;
+        top: 7px;
+        left: 206px;
+    }
+
+    .N {
+        position: absolute;
+        top: 7px;
+        left: 225px;
+    }
+
+    .O {
+        position: absolute;
+        top: 7px;
+        left: 240px;
+    }
+
+    .P {
+        position: absolute;
+        top: 7px;
+        left: 260px;
+    }
+
+    .Q {
+        position: absolute;
+        top: 7px;
+        left: 280px;
+    }
+
+    .R {
+        position: absolute;
+        top: 7px;
+        left: 300px;
+    }
+
+    .S {
+        position: absolute;
+        top: 7px;
+        left: 320px;
     }
 
 
@@ -1332,17 +1630,58 @@ div .row {
 
     /*<!------------------------------------------ Assignments --------------------------------------------------->*/
 
-    #mSectionAssignmentsSub01 {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 7px;
-        row-gap: 7px;
-
-        position: relative;
-        left: 10px;
-    }
-
     #mSectionAssignmentsSub01>div>img {
         width: 40vw;
+    }
+
+    #mSectionAssignmentsSub01 {
+        overflow: hidden;
+        font-family: Arial, Helvetica, sans-serif;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr;
+
+        position: relative;
+        left: 50px;
+    }
+
+    .flip_card {
+        width: 35vw;
+    }
+
+    .front {
+        width: 35vw;
+    }
+
+    .front img{
+        width: 35vw;
+    }
+
+    .back {
+        width: 35vw;
+    }
+
+    .back img{
+        width: 35vw;
+    }
+
+    .back p{
+        position: relative;
+        bottom: 100px;
+        left: 5px;
+        font-weight: bold;
+        font-size: 1.4vw;
+    }
+
+    .back a{
+        position: relative;
+        bottom: 95px;
+        text-decoration: none;
+        border: none;
+        background: transparent;
+        font-weight: bold;
+        font-size: 18px;
+        color: blue;
     }
 
 
@@ -1383,6 +1722,11 @@ div .row {
 
     #m2SectionContact span {
         font-size: 12px;
+    }
+
+    #m2SectionContact {
+        position: relative;
+        left: 100px;
     }
 
 }
