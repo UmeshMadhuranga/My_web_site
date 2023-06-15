@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment</title>
+
+    <style>
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(189.5px, auto);
+
+            margin: -8px;
+        }
+
+        .one {
+            background-color: red;
+            grid-column: 1 / 3;
+            grid-row: 1;
+        }
+
+        .two {
+            background-color: green;
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        .three {
+            background-color: red;
+            grid-column: 4;
+            grid-row: 1 / 4;
+        }
+
+        .four {
+            background-color: darkmagenta;
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .five {
+            background-color: deeppink;
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .six {
+          background-color: blue;
+          grid-column: 3;
+          grid-row: 2;
+        }
+
+        .seven {
+          background-color: saddlebrown;
+          grid-column: 1;
+          grid-row: 3;
+        }
+
+        .eight {
+          background-color: indigo;
+          grid-column: 2 / 4;
+          grid-row: 3;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+        <div class="six"></div>
+        <div class="seven"></div>
+        <div class="eight"></div>
+    </div>
+
+
+</body>
+</html>

@@ -67,10 +67,10 @@ header>section {
     font-size: 1.5em;
     letter-spacing: 7px;
     text-shadow: none;
-    animation: glowanimation 1s infinite linear;
+    animation: glowAnimation 1s infinite linear;
 }
 
-@keyframes glowanimation {
+@keyframes glowAnimation {
     0% {
         color: #484848;
         text-shadow: none;
@@ -901,104 +901,216 @@ div .row {
 
 /*<!------------------------------------------ Assignments --------------------------------------------------->*/
 
-#mSectionAssignments {
+/*#mSectionAssignments {*/
+/*    height: fit-content;*/
+/*    position: relative;*/
+/*    box-sizing: border-box;*/
+/*    background: #90A2AE;*/
+/*}*/
+
+/*#mSectionAssignments>h4 {*/
+/*    text-align: center;*/
+/*}*/
+
+/*#mSectionAssignmentsSub01 {*/
+/*    height: 200vh;*/
+/*    overflow: hidden;*/
+/*    font-family: Arial, Helvetica, sans-serif;*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(3, 1fr);*/
+/*    grid-template-rows: repeat(5, 1fr);*/
+/*}*/
+
+/*!*                                        flip card                                            *!*/
+
+/*.flip_card {*/
+/*    width: 30vw;*/
+/*    height: fit-content;*/
+/*}*/
+
+/*#mSectionAssignmentsSub01 .flip_card:hover .card {*/
+/*    cursor: pointer;*/
+/*    transform: rotateY(180deg);*/
+/*}*/
+
+/*.card {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    position: relative;*/
+/*    transition: transform 1.5s;*/
+/*    transform-style: preserve-3d;*/
+/*    border: none;*/
+/*}*/
+
+/*.front {*/
+/*    width: 30vw;*/
+/*    height: fit-content;*/
+
+/*    border-radius: 2rem;*/
+/*    position: absolute;*/
+/*    backface-visibility: hidden;*/
+/*}*/
+
+/*.front img{*/
+/*    width: 30vw;*/
+/*    backface-visibility: hidden;*/
+/*    border: 3px solid;*/
+/*    border-radius: 2rem;*/
+
+/*}*/
+
+/*.back {*/
+/*    width: 30vw;*/
+/*    height: fit-content;*/
+/*    transform: rotateY(180deg);*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    gap: 1rem;*/
+
+/*    border-radius: 2rem;*/
+/*    position: absolute;*/
+/*    backface-visibility: hidden;*/
+/*}*/
+
+/*.back img{*/
+/*    width: 30vw;*/
+/*    backface-visibility: hidden;*/
+/*    opacity: 0.5;*/
+/*    border: 3px solid;*/
+/*    border-radius: 2rem;*/
+/*}*/
+
+/*.back p{*/
+/*    position: relative;*/
+/*    bottom: 150px;*/
+/*    left: 20px;*/
+/*    font-weight: bold;*/
+/*    font-size: 1vw;*/
+/*}*/
+
+/*.back a{*/
+/*    position: relative;*/
+/*    bottom: 150px;*/
+/*    text-decoration: none;*/
+/*    border: none;*/
+/*    background: transparent;*/
+/*    font-weight: bold;*/
+/*    font-size: 18px;*/
+/*    color: blue;*/
+/*}*/
+
+#mSectionAssignment01 {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    position: relative;
-    box-sizing: border-box;
-    background: #90A2AE;
+    font-family: 'Poppins', sans-serif;
 }
 
-#mSectionAssignments>h4 {
+#secAssignmentBoxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.assignmentContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.assignmentContainer .assignmentBox {
+    position: relative;
+    width: 350px;
+    padding: 40px;
+    background: rgb(173, 173, 173);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
     text-align: center;
 }
 
-#mSectionAssignmentsSub01 {
-    height: 100vh;
-    overflow: hidden;
-    font-family: Arial, Helvetica, sans-serif;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-
-/*                                        flip card                                            */
-
-.flip_card {
-    width: 30vw;
-    height: fit-content;
-}
-
-#mSectionAssignmentsSub01 .flip_card:hover .card {
-    cursor: pointer;
-    transform: rotateY(180deg);
-}
-
-.card {
-    width: 100%;
+.assignmentContainer .assignmentBox::before {
+    content: '';
+    width: 50%;
     height: 100%;
-    position: relative;
-    transition: transform 1.5s;
-    transform-style: preserve-3d;
-    border: none;
-}
-
-.front {
-    width: 30vw;
-    height: fit-content;
-
-    border-radius: 2rem;
     position: absolute;
-    backface-visibility: hidden;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 2;
+    pointer-events: none;
 }
 
-.front img{
-    width: 30vw;
-    backface-visibility: hidden;
-    border: 3px solid;
-    border-radius: 2rem;
-
-}
-
-.back {
-    width: 30vw;
-    height: fit-content;
-    transform: rotateY(180deg);
+.assignmentContainer .assignmentBox .assignmentIcon {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    background: #000;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-
-    border-radius: 2rem;
-    position: absolute;
-    backface-visibility: hidden;
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 40px;
+    font-weight: 700;
+    transition: 1s;
+    border: 0.5px solid white;
 }
 
-.back img{
-    width: 30vw;
-    backface-visibility: hidden;
-    opacity: 0.5;
-    border: 3px solid;
-    border-radius: 2rem;
+.assignmentContainer .assignmentBox .assignmentIcon {
+    box-shadow: 0 0 0 0 #23e629;
+    background: #23e629;
 }
 
-.back p{
+.assignmentContainer .assignmentBox:hover .assignmentIcon {
+    box-shadow: 0 0 0 400px #23e629;
+}
+
+.assignmentContainer .assignmentBox .assignmentContent {
     position: relative;
-    bottom: 150px;
-    left: 20px;
-    font-weight: bold;
-    font-size: 1vw;
+    z-index: 1;
+    transition: 0.5s;
 }
 
-.back a{
-    position: relative;
-    bottom: 150px;
+.assignmentContainer .assignmentBox:hover .assignmentContent {
+    color: #fff;
+}
+
+.assignmentContainer .assignmentBox .assignmentContent h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 0;
+    font-weight: 600;
+}
+
+.assignmentContainer .assignmentBox .assignmentContent p {
+    margin: 0;
+    padding: 0;
+}
+
+.assignmentContainer .assignmentBox .assignmentContent a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #E1E3E2;
+    border-radius: 4px;
     text-decoration: none;
-    border: none;
-    background: transparent;
-    font-weight: bold;
-    font-size: 18px;
-    color: blue;
+    color: #000;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.assignmentContainer .assignmentBox .assignmentContent a:hover {
+    background: #035606;
+    color: #fff;
 }
 
 /*<!------------------------------------------ Contact --------------------------------------------------->*/
@@ -1013,10 +1125,12 @@ div .row {
 }
 
 #mSectionContactSub1>div {
-    border-top: 3px solid #bb2d3b;
-    border-bottom: 3px solid yellowgreen;
-    border-left: 3px solid blue;
-    border-right: 3px solid orange;
+    border-top: 3px solid orange;
+    border-right: 3px solid darkcyan;
+    border-left: 3px solid orange;
+    border-bottom: 3px solid darkcyan;
+
+    border-radius: 10px;
 
     width: fit-content;
     height: fit-content;
@@ -1039,6 +1153,47 @@ div .row {
 #mSectionContactSub1>div>a {
     color: white;
     font-weight: bold;
+    font-size: 15px;
+}
+
+#mSectionContactSub2 {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    height: fit-content;
+    width: 100vw;
+
+    position: relative;
+}
+
+#mSectionContactSub2>ul {
+    position: relative;
+    left: 37%;
+
+}
+
+#mSectionContactSub2>ul>li {
+    list-style: none;
+    display: inline-block;
+
+}
+
+#mSectionContactSub2>ul>li>a>i {
+    color: white;
+    cursor: pointer;
+    font-size: 25px;
+    padding-top: 18px;
+    padding-right: 50px;
+    /*padding-bottom: 40px;*/
+}
+
+#mSectionContactSub2>ul>li>a>i:hover {
+    color: #0d6efd;
+}
+
+#mSectionThankYou>p {
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 10px;
     font-size: 15px;
 }
 
@@ -1071,7 +1226,7 @@ div .row {
     font-size:4vw;
     -webkit-text-stroke: 0.1vw white;
     border-bottom: 3px solid #20c997;
-
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .titleTextDiv>h1:before {
@@ -1180,16 +1335,19 @@ div .row {
 }
 
 #m3SectionProjectsSub1 {
-    width: 1000px;
+    width: 80%;
     height: fit-content;
-    display: grid;
-    grid-template-columns: 1fr;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     grid-row-gap: 30px;
 
     position: absolute;
     left: 0;
     right: 0;
-    top: 100px;
+    top: 0;
     bottom: 0;
     margin: auto;
 }
@@ -1207,6 +1365,7 @@ div .row {
 }
 
 .projectClass {
+    padding: 10px;
     border: 1px solid transparent;
     box-shadow: 0 3px 12px 0 #ccc;
 
@@ -1219,10 +1378,12 @@ div .row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 50px;
+
+    position: relative;
 }
 
 .projectClass>div>img {
-    width: 500px;
+    width: 70vh;
     border: 3px solid black;
     border-radius: 10px;
 }
@@ -1231,6 +1392,7 @@ div .row {
     color: #11a372;
     font-size: 20px;
     font-weight: bold;
+    padding-bottom: 20px;
 }
 
 .projectClass>div>p {
@@ -1238,24 +1400,27 @@ div .row {
     font-size: 17px;
 }
 
-.projectClass>div>button {
+.projectClass>div>a {
     border: 3px solid saddlebrown;
     border-radius: 10px;
     padding: 6px;
     color: papayawhip;
     background-color: #4f5050;
     font-weight: bold;
+    text-decoration: none;
+
+    position: absolute;
+    right: 20px;
 }
 
-.projectClass>div>button:hover {
-    transition: 0.5s;
-    transform: scale(1.1);
-    cursor: pointer;
+.projectClass>div>a:hover {
+    color: #fcc9af;
 }
 
 /*//////////////////////////////////////////// Main 04 ////////////////////////////////////////////////////////////*/
 
 #main_04 {
+    display: none;
     background: #ecf4fb;
     border: 3px solid red;
 }
@@ -1630,59 +1795,59 @@ div .row {
 
     /*<!------------------------------------------ Assignments --------------------------------------------------->*/
 
-    #mSectionAssignmentsSub01>div>img {
-        width: 40vw;
-    }
+    /*#mSectionAssignmentsSub01>div img {*/
+    /*    width: 80vw;*/
+    /*}*/
 
-    #mSectionAssignmentsSub01 {
-        overflow: hidden;
-        font-family: Arial, Helvetica, sans-serif;
-        display: grid;
-        grid-template-columns: 1fr 1fr ;
-        grid-template-rows: 1fr 1fr 1fr;
+    /*#mSectionAssignmentsSub01 {*/
+    /*    overflow: hidden;*/
+    /*    font-family: Arial, Helvetica, sans-serif;*/
+    /*    display: grid;*/
+    /*    grid-template-columns: 1fr;*/
+    /*    grid-template-rows: repeat(5, 1fr);*/
 
-        position: relative;
-        left: 50px;
-    }
+    /*    position: relative;*/
+    /*    left: 50px;*/
+    /*}*/
 
-    .flip_card {
-        width: 35vw;
-    }
+    /*.flip_card {*/
+    /*    width: 35vw;*/
+    /*}*/
 
-    .front {
-        width: 35vw;
-    }
+    /*.front {*/
+    /*    width: 35vw;*/
+    /*}*/
 
-    .front img{
-        width: 35vw;
-    }
+    /*.front img{*/
+    /*    width: 35vw;*/
+    /*}*/
 
-    .back {
-        width: 35vw;
-    }
+    /*.back {*/
+    /*    width: 35vw;*/
+    /*}*/
 
-    .back img{
-        width: 35vw;
-    }
+    /*.back img{*/
+    /*    width: 35vw;*/
+    /*}*/
 
-    .back p{
-        position: relative;
-        bottom: 100px;
-        left: 5px;
-        font-weight: bold;
-        font-size: 1.4vw;
-    }
+    /*.back p{*/
+    /*    position: relative;*/
+    /*    bottom: 100px;*/
+    /*    left: 5px;*/
+    /*    font-weight: bold;*/
+    /*    font-size: 1.4vw;*/
+    /*}*/
 
-    .back a{
-        position: relative;
-        bottom: 95px;
-        text-decoration: none;
-        border: none;
-        background: transparent;
-        font-weight: bold;
-        font-size: 18px;
-        color: blue;
-    }
+    /*.back a{*/
+    /*    position: relative;*/
+    /*    bottom: 95px;*/
+    /*    text-decoration: none;*/
+    /*    border: none;*/
+    /*    background: transparent;*/
+    /*    font-weight: bold;*/
+    /*    font-size: 18px;*/
+    /*    color: blue;*/
+    /*}*/
 
 
     /*<!------------------------------------------ Contact --------------------------------------------------->*/
@@ -1709,6 +1874,12 @@ div .row {
         left: 34vw;
     }
 
+    #mSectionContactSub2>ul {
+        position: relative;
+        left: 27%;
+
+    }
+
 
     /*//////////////////////////////////////////// Main 02 ////////////////////////////////////////////////////////////*/
 
@@ -1727,6 +1898,41 @@ div .row {
     #m2SectionContact {
         position: relative;
         left: 100px;
+    }
+
+    /*//////////////////////////////////////////// Main 03 ////////////////////////////////////////////////////////////*/
+
+    #m3SectionProjectsSub1 {
+        position: relative;
+        top: 60px;
+    }
+
+    .projectClass {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 10px;
+    }
+
+    .projectClass>div>img {
+        width: 40vw;
+        border: 3px solid black;
+        border-radius: 10px;
+
+        position: relative;
+        left: 120px;
+    }
+
+    .projectClass>div>h4 {
+        font-size: 17px;
+    }
+
+    .projectClass>div>p {
+        font-size: 13px;
+    }
+
+    .projectClass>div>a {
+        font-size: 13px;
+        position: unset;
     }
 
 }

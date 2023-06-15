@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment</title>
+
+    <style>
+
+        body {
+            margin: 0;
+        }
+
+        section {
+            width: 100vw;
+            height: 100vh;
+            background-color: mediumpurple;
+
+            position: relative;
+        }
+
+        section>div {
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+
+            border-radius: 100%;
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        section>div>h1 {
+            width: max-content;
+            height: max-content;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            right: 0;
+            margin: auto;
+        }
+
+        section>div::before {
+            content: "";
+
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+
+            border: 10px solid white;
+            border-top-color: #ff253a;
+
+            border-radius: 100%;
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        section>div:hover::before {
+            transform: rotate(360deg);
+            transition-duration: 3s;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<section>
+    <div>
+        <h1>RWAD</h1>
+    </div>
+</section>
+
+</body>
+</html>

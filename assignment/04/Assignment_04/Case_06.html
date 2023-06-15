@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment</title>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+
+    <style>
+
+        main {
+            /*width: 1279px;*/
+            /*height: 569px;*/
+            width: 100vw;
+            height: 100vh;
+            background-image: url("assests/image/sky.jpg");
+            background-size: cover;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        main>section:first-child {
+            width: 5116px;
+            display: flex;
+
+            animation-name: case06_road;
+            animation-duration: 12s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        main>section:first-child>div {
+            width: 1279px;
+            height: 200px;
+
+            position: relative;
+            top: 370px;
+
+            background-image: url("assests/image/road.jpg");
+        }
+
+        main>section:nth-child(2) {
+            width: 5116px;
+            display: flex;
+
+            animation-name: case06_city;
+            animation-duration: 12s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        main>section:nth-child(2)>div {
+            width: 1279px;
+            height: 200px;
+            /*border: 2px solid green;*/
+
+            background-image: url("assests/image/city.png");
+
+            position: relative;
+            bottom: 30px;
+        }
+
+        main>section:nth-child(3)>.car {
+            width: 330px;
+            height: 115px;
+            /*border: 1px solid;*/
+            background-image: url("assests/image/car.png");
+            background-size: cover;
+
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 220px;
+            margin: auto;
+        }
+
+        main>section:nth-child(4) {
+            display: flex;
+        }
+
+        main>section:nth-child(3)>div>div {
+            width: 60px;
+            aspect-ratio: 1/1;
+            /*border: 1px solid;*/
+
+            background-image: url("assests/image/wheel.png");
+            background-size: cover;
+
+            position: absolute;
+
+            animation-name: case06_wheel;
+            animation-duration: 12s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        main>section:nth-child(3)>div>div:first-child {
+            top: 73px;
+            left: 29px;
+        }
+
+        main>section:nth-child(3)>div>div:nth-child(2) {
+            top: 73px;
+            left: 231px;
+        }
+
+        @keyframes case06_road {
+            0% {
+                transform: translateX(0%);
+            }
+            25% {
+                transform: translateX(-25%);
+            }
+            50% {
+                transform: translateX(-50%);
+            }
+            75% {
+                transform: translateX(-75%);
+            }
+        }
+
+        @keyframes case06_city {
+            0% {
+                transform: translateX(0%);
+            }
+            25% {
+                transform: translateX(-25%);
+            }
+            50% {
+                transform: translateX(-50%);
+            }
+            75% {
+                transform: translateX(-75%);
+            }
+        }
+
+        @keyframes case06_wheel {
+            from {
+                transform: rotate(0deg);
+            } to {
+                transform: rotate(3600deg);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+<main>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <section>
+         <div class="car">
+             <div></div>
+             <div></div>
+         </div>
+    </section>
+
+</main>
+
+</body>
+</html>

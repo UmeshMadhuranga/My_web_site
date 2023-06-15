@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>POS System</title>
+
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="assests/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assests/boostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assests/boostrap/css/bootstrap-grid.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            font-family: 'Alkatra', cursive;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        body {
+            background-color: #ECEEED;
+        }
+
+        header {
+            border: 2px solid #5c636a;
+            background-color: #badbcc;
+        }
+
+        header>nav>div>div>ul {
+            position: absolute;
+            right: 0;
+        }
+
+        #mClass04Sub01 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #mClass04Sub01>section {
+            border: 1px solid #523e02;
+            border-top: none;
+            width: 45vw;
+            padding: 10px;
+            margin: 10px;
+            box-shadow: rgb(49, 51, 59) 0px 4px 12px;
+            border-radius: 10px;
+
+        }
+
+        #mClass04Sub01>section>form>div>div>input:hover {
+            background-color: #b6d4fe;
+        }
+
+        #mClass04Sub01>section>form>div>div>select:hover {
+            background-color: #b6d4fe;
+        }
+
+        #mClass04Sub01>section:nth-child(2)>form>button {
+            background-color: #5fc5ea;
+            font-size: 1vw;
+            font-weight: bolder;
+
+            position: relative;
+            left: 36vw;
+
+        }
+
+        /*main>section:nth-child(2) {*/
+        /*    border: 1px solid #523e02;*/
+        /*    width: 40vw;*/
+        /*    padding: 10px;*/
+        /*    margin: 10px;*/
+        /*    box-shadow: rgba(0, 144, 162, 0.68) 0px 3px 8px;*/
+        /*    border-radius: 10px;*/
+        /*}*/
+
+        body>section {
+            width: 80vw;
+            border: 2px solid #5c636a;
+
+            padding: 10px;
+
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 10px auto auto;
+        }
+
+        body>section>label:nth-child(2) {
+            font-weight: bold;
+            font-size: 2vw;
+        }
+
+        body>section>label:nth-child(3) {
+            font-weight: bold;
+            font-size: 2vw;
+        }
+
+        body>section>button {
+            background-color: #20c997;
+            border-radius: 10px;
+            border: 2px solid #5c636a;
+            font-weight: bold;
+
+            position: relative;
+            left: 55vw;
+            margin-top: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<header>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <h2>POS</h2>
+<!--            <a class="navbar-brand" href="#">POS</a>-->
+<!--            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--                <span class="navbar-toggler-icon"></span>-->
+<!--            </button>-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="customer.html">Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="placeOrder.html">Place Order</a>
+                    </li>
+<!--                    <li class="nav-item dropdown">-->
+<!--                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                            Dropdown-->
+<!--                        </a>-->
+<!--                        <ul class="dropdown-menu">-->
+<!--                            <li><a class="dropdown-item" href="#">Action</a></li>-->
+<!--                            <li><a class="dropdown-item" href="#">Another action</a></li>-->
+<!--                            <li><hr class="dropdown-divider"></li>-->
+<!--                            <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
+                </ul>
+                <!--                <form class="d-flex" role="search">-->
+                <!--                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
+                <!--                    <button class="btn btn-outline-success" type="submit">Search</button>-->
+                <!--                </form>-->
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+<main>
+
+    <section id="mClass04Sub01">
+
+        <section>
+
+            <form>
+
+                <h4 style="color: #20c997; font-weight: bold; text-align: center; background-color: #4f5050">Select Customer</h4>
+
+                <br>
+
+                <div class="row mb-3">
+                    <label for="customerID" class="col-sm-2 col-form-label">ID</label>
+                    <div class="col-sm-10">
+                        <select class="form-control" id="customerID">
+                            <option value="1">C001</option>
+                            <option value="2">C002</option>
+                            <option value="3">C003</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputName">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputAddress" class="col-sm-2 col-form-label">Address</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputAddress">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="contact" class="col-sm-2 col-form-label">Contact</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="contact">
+                    </div>
+                </div>
+
+            </form>
+
+        </section>
+
+        <section>
+
+            <form>
+
+                <h4 style="color: #20c997; font-weight: bold; text-align: center; background-color: #4f5050">Select Items</h4>
+
+                <br>
+
+                <div class="row mb-3">
+                    <label for="ItemCode" class="col-sm-2 col-form-label">Code</label>
+                    <div class="col-sm-10">
+                        <select class="form-control" id="ItemCode">
+                            <option value="1">I001</option>
+                            <option value="2">I002</option>
+                            <option value="3">I003</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="itemName" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="itemName">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="itemPrice" class="col-sm-2 col-form-label">Price</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="itemPrice">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="QTY" class="col-sm-2 col-form-label">QTY</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="QTY">
+                    </div>
+                </div>
+
+                <button type="add" class="btn btn-primary">Add to Cart</button>
+
+            </form>
+
+        </section>
+
+    </section>
+
+
+
+</main>
+
+<section>
+
+    <table class="table">
+
+        <thead>
+        <tr>
+            <th scope="col">Item Code</th>
+            <th scope="col">Item name</th>
+            <th scope="col">Price</th>
+            <th scope="col">QTY</th>
+            <th scope="col">Total</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        <tr>
+            <th scope="row">I001</th>
+            <td>Sugar</td>
+            <td>200.00</td>
+            <td>5 Kg</td>
+            <td>1000.00</td>
+        </tr>
+
+        <tr>
+            <th scope="row">code</th>
+            <td>item name</td>
+            <td>price</td>
+            <td>qty</td>
+            <td>total</td>
+        </tr>
+
+        <tr>
+            <th scope="row">code</th>
+            <td>item name</td>
+            <td>price</td>
+            <td>qty</td>
+            <td>total</td>
+        </tr>
+
+        <tr>
+            <th scope="row">code</th>
+            <td>item name</td>
+            <td>price</td>
+            <td>qty</td>
+            <td>total</td>
+        </tr>
+
+        <tr>
+            <th scope="row">code</th>
+            <td>item name</td>
+            <td>price</td>
+            <td>qty</td>
+            <td>total</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+    <label for="total">Total : </label>
+    <label id="total">00.00</label>
+    <button type="purchase">Purchase</button>
+
+</section>
+
+</body>
+</html>
