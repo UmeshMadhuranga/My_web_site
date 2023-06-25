@@ -354,7 +354,6 @@
 
             </section>
 
-
         </section>
         <br>
 
@@ -637,18 +636,6 @@
 
             <section id="secAssignmentBoxes">
 
-<!--                <div class="assignmentContainer">-->
-<!--                    <div class="assignmentBox">-->
-<!--                        <div class="assignmentIcon">01</div>-->
-<!--                        <div class="assignmentContent">-->
-<!--                            <h3>Assignment 01</h3>-->
-<!--                            <a href="#">See project</a>-->
-<!--                            <br>-->
-<!--                            <a href="#">Code</a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-
                 <div class="assignmentContainer">
                     <div class="assignmentBox">
                         <div class="assignmentIcon">01</div>
@@ -666,8 +653,18 @@
                         <div class="assignmentIcon">02</div>
                         <div class="assignmentContent">
                             <h3>Assignment 03</h3>
-                            <a href="#">See project</a>
+                            <a onclick="displayCases1()" style="cursor: pointer">See project</a>
+<!--                            <button onclick="displayCases()">See project</button>-->
                             <br>
+                            <div class="caseBox1">
+                                <a href="assignment/03/Assignment_03/Case_01.html">Case 01</a>
+                                <a href="assignment/03/Assignment_03/Case_02.html">Case 02</a>
+                                <a href="assignment/03/Assignment_03/Case_03.html">Case 03</a>
+                                <a href="assignment/03/Assignment_03/Case_04.html">Case 04</a>
+                                <a href="assignment/03/Assignment_03/Case_05.html">Case 05</a>
+                                <a href="assignment/03/Assignment_03/Case_06.html">Case 06</a>
+                                <span onclick="closeCaseBox1()">X</span>
+                            </div>
                             <a href="https://github.com/UmeshMadhuranga/Internet_Technologies-Assignment_03">Code</a>
                         </div>
                     </div>
@@ -678,24 +675,21 @@
                         <div class="assignmentIcon">03</div>
                         <div class="assignmentContent">
                             <h3>Assignment 04</h3>
-                            <a href="#">See project</a>
+                            <a onclick="displayCases2()" style="cursor: pointer">See project</a>
                             <br>
+                            <div class="caseBox2">
+                                <a href="assignment/04/Assignment_04/Case_01.html">Case 01</a>
+                                <a href="assignment/04/Assignment_04/Case_02.html">Case 02</a>
+                                <a href="assignment/04/Assignment_04/Case_03.html">Case 03</a>
+                                <a href="assignment/04/Assignment_04/Case_04.html">Case 04</a>
+                                <a href="assignment/04/Assignment_04/Case_05.html">Case 05</a>
+                                <a href="assignment/04/Assignment_04/Case_06.html">Case 06</a>
+                                <span onclick="closeCaseBox2()">X</span>
+                            </div>
                             <a href="https://github.com/UmeshMadhuranga/Assignment_04">Code</a>
                         </div>
                     </div>
                 </div>
-
-<!--                <div class="assignmentContainer">-->
-<!--                    <div class="assignmentBox">-->
-<!--                        <div class="assignmentIcon">05</div>-->
-<!--                        <div class="assignmentContent">-->
-<!--                            <h3>Assignment 05</h3>-->
-<!--                            <a href="#">See project</a>-->
-<!--                            <br>-->
-<!--                            <a href="#">Code</a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
 
                 <div class="assignmentContainer">
                     <div class="assignmentBox">
@@ -1139,6 +1133,25 @@
 
     function closeNavBar2() {
         document.getElementById('navbarDiv2').style.display = "none";
+    }
+
+
+    //                       display case box
+
+    function displayCases1() {
+        $('.caseBox1').css('display', 'block');
+    }
+
+    function closeCaseBox1() {
+        $('.caseBox1').css('display', 'none');
+    }
+
+    function displayCases2() {
+        $('.caseBox2').css('display', 'block');
+    }
+
+    function closeCaseBox2() {
+        $('.caseBox2').css('display', 'none');
     }
 
 </script>
